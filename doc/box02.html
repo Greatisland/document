@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스모델 02 - 요소를 가운데 위치시키기</title>
+    <style>
+        * {
+            margin: 0;padding: 0;box-sizing: border-box;
+        }
+        div {
+            background-color: bisque;
+            }
+        div:nth-child(1) {
+            width: 100px;
+            /* 마진과 패딩 방향 축약형으로 쓸 때 */
+            /* 방향4 : 상 우 하 좌 */
+            /* 방향3 : 상 좌우 하 */
+            /* 방향2 : 상하 좌우 */
+            margin:0 auto;
+            text-align: center;
+        }
+        div:nth-child(2) {
+            width: 200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        div:nth-child(3) {
+            width: 300px;
+        }
+        div:nth-child(4) {
+            width: 400px;
+        }
+        div:nth-child(5) {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <!--alt+shift+방향키 할 경우 복사-->
+    <div>
+        BOX01
+    </div>
+    <div>
+        <span>BOX02</span>
+    </div>
+    <div>
+        BOX03
+    </div>
+    <div>
+        BOX04
+    </div>
+    <div>
+        BOX05
+    </div>
+</body>
+</html>
