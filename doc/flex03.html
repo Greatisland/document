@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스03</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+        * {margin:0;padding:0;box-sizing: border-box;font-size: inherit;font-weight: inherit;font-style: normal;}
+        ul,ol {list-style: none;}
+        a {color:inherit;text-decoration: none;}
+        img{vertical-align: middle;max-width: 100%;}
+
+        body {
+            background: #fff;
+            font-family: 'Noto Sans KR', sans-serif;;
+        }
+        .Wrap {
+            min-width: 1900px;
+        }
+        .headerWrap {
+            position:absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            z-index: 99;
+        }
+        .topBanner {
+            background: #333;
+            color:#fff;
+        }
+        .topBanner .inner {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .topBanner ul {
+            display: flex;
+            /* gap: 30px;
+            position: relative; */
+        }
+        .topBanner .left li {
+            margin-right:30px;
+        }
+
+        .topBanner .right {
+            gap:30px;
+        }
+        .topBanner .right li {
+            position:relative;
+        }
+        /* ~은 첫 요소는 생략하고 두번째부터 적용 */
+        .topBanner .right li~li::before {
+            content: "";
+            display:block;
+            width: 1px;
+            height: 12px;
+            background: #ddd;
+            position: absolute;
+            top: 50%;
+            left: -15px;
+            transform: translateY(-50%);
+        }
+        .headerWrap h1 {
+            padding: 20px 0;
+            text-align: center;
+        }
+        .headerWrap h1 img {
+            width: 150px;
+        }
+        .gnb {
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+        }
+        .gnb ul {
+            display:flex;
+            justify-content: center;
+            gap: 40px;
+            width:1200px;
+            color: #fff;
+            margin:0 auto;
+            line-height: 50px;
+        }
+        .mainVisual {
+            position: relative;
+            background: url(../img/menu_n05.jpg) no-repeat center center/cover;
+            /* background-image: ;
+            background-repeat: ;
+            background-position-x: ;
+            background-position-y: ;
+            background-size: ; */
+            height: 100vh;
+        }
+        .mainVisual .slogan {
+            position: absolute;
+            inset: 50% auto auto 50%;
+            transform: translate(-50%,-50%);
+            width:1200px;
+            color:#ddd;
+            text-align: left;
+        }
+        .mainVisual .slogan h2 {
+            font-size: 23px;
+            font-weight: 600;
+            letter-spacing: 1em;
+            margin-bottom: 30px;
+        }
+        .mainVisual .slogan p {
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 1.618;
+            /* 보통 황금비율을 쓴다. 1.618 */
+            letter-spacing: -0.025em;
+        }
+        .mainContent {
+            padding: 100px 0;
+            text-align: center;
+        }
+        /* .inner img {
+            margin: 0 auto;
+        } */
+        .mainContent h2 {
+            font-size: 23px;
+            font-weight: 600;
+            letter-spacing: 1em;
+            margin-bottom: 30px;
+        }
+        .mainContent p {
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 1.618;
+            /* 보통 황금비율을 쓴다. 1.618 */
+            letter-spacing: -0.025em;
+            margin-bottom: 30px;
+        }
+        .mainContent h2::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 2px;
+            background: #333;
+            margin: 30px auto;
+        }
+        .mainContent .container {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .mainContent .container figure {
+            flex: 1;
+            padding: 0 15px;
+        }
+        .mainContent .container .inner {
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .mainContent .container .inner img{
+            transition: 0.5s;
+        }
+        .mainContent .container .inner:hover img {
+            transform:scale(1.2);
+        }
+        .footerWrap {
+            padding: 50px 0;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            letter-spacing: -0.025em;
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+        .footerWrap .sns {
+            padding: 20px 0;
+        }
+        .footerWrap .sns i {
+            background: #222;
+            padding: 10px;
+            font-size: 17px;
+        }
+        .toTop {
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+        }
+        .toTop i {
+            background: #fff;
+            padding: 10px;
+            font-size: 19px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="Wrap">
+    <header class="headerWrap">
+        <div class="topBanner">
+            <div class="inner">
+                <ul class="left">
+                    <li><a href="#!"><i class="xi-chip-o"></i>kor</a></li>
+                    <li><a href="#!">market</a></li>
+                </ul>
+                <ul class="right">
+                    <li><a href="#!">holy</a></li>
+                    <li><a href="#!">holy</a></li>
+                    <li><a href="#!">holy</a></li>
+                </ul>
+            </div>
+        </div>
+        <h1>
+            <a href="#!"><img src="../img/menu_n01.jpg" alt="홀리싯"></a>
+
+        </h1>
+        <nav class="gnb">
+            <ul>
+                <li><a href="#!">NEW IN</a></li>
+                <li><a href="#!">JEWELRY</a></li>
+                <li><a href="#!">WATCHES</a></li>
+                <li><a href="#!">ACCESSORIES</a></li>
+                <li><a href="#!">DECORATIONS</a></li>
+                <li><a href="#!">GIFTS</a></li>
+                <li><a href="#!">GIFTS</a></li>
+                <li><a href="#!">GIFTS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="mainVisual">
+            <div class="slogan">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, placeat.</p>
+            </div>
+        </section>
+        <section class="mainContent">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, placeat.</p>
+            <div class="container">
+                <figure>
+                    <div class="inner">
+                        <img src="../img/menu_n01.jpg" alt="">
+                    </div>
+                    <strong>Lorem, ipsum dolor.</strong>
+                </figure>
+                <figure>
+                    <div class="inner">
+                        <img src="../img/menu_n01.jpg" alt="">
+                    </div>
+                    <strong>Lorem, ipsum dolor.</strong>
+                </figure>
+                <figure>
+                    <div class="inner">
+                        <img src="../img/menu_n01.jpg" alt="">
+                    </div>
+                    <strong>Lorem, ipsum dolor.</strong>
+                </figure>
+            </div>
+        </section>
+    </main>
+    <footer class="footerWrap">
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+            <li>Lorem ipsum dolor sit amet consectetur.</li>
+        </ul>
+        <div class="sns">
+            <a href="#!"><i class="xi-instagram"></i></a>
+            <a href="#!"><i class="xi-facebook"></i></a>
+            <a href="#!"><i class="xi-youtube"></i></a>
+        </div>
+        <address>&copy lee.</address>
+    </footer>
+    <div class="toTop">
+        <i class="xi-arrow-top"></i>
+    </div>
+</div>
+</body>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>
+    $('.toTop').on('click',function(){
+        $('html,body').animate({scrollTop:0})
+    })
+</script>
+</html>

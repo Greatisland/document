@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position01</title>
+    <style>
+        * {
+            margin:0;padding:0;box-sizing: border-box;
+        }
+        /* 
+        position 탐구
+        static; - 포지션 속성을 가지지 않는다.
+        absolute; - 공간을 차지한다. 떠오르지 않는다. 부모의 relative속성을 기준으로 잡거나 없을 경우 body를 기준으로 위치를 잡는다.
+        relative; - 앞 포지션의 기준이 된다.
+        fixed; - 
+        sticky; - 
+        
+        */
+
+        .contentWrap {
+            margin: 400px;
+            width: 1000px;
+            height: 1000px;
+            background: yellow;
+        }
+        .absolute {
+            position: absolute;
+            top:100px;
+            left:100px;
+            background-color: red;
+        }
+        .headerWrap {
+            position:sticky;
+            top:100px;
+            left:0;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <header class="headerWrap">
+        sticky...
+    </header>
+    <section class="contentWrap">
+        <div class="absolute">
+            AB
+        </div>
+</section>
+</body>
+</html>
