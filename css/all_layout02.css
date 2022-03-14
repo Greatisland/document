@@ -1,0 +1,19 @@
+.mainVisual figure {
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+}
+
+.mainVisual .itm01 {
+    background:url(../img/menu_n01.jpg);
+}
+
+.mainVisual .itm02 {
+    background:url(../img/menu_n02.jpg);
+}
+
+.mainVisual .itm03 {
+    background:url(../img/menu_n03.jpg);
+}
