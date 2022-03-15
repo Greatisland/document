@@ -101,7 +101,7 @@
 
 .service {
     padding: 100px 0;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .service .inner {
