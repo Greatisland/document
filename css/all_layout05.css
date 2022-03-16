@@ -1,0 +1,64 @@
+.headerWrap {
+    display: none;
+    background: #0f0;
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+}
+.headerWrap .container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.buttonWrap {
+    position: relative;
+}
+.buttonWrap i {
+    position: absolute;
+    top: 0;
+    left: 65%;
+}
+.tabMenu {
+    padding: 100px 0;
+    background: #f2f2f2;
+}
+
+.tabMenu .container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.tabMenu .tabLink {
+    display: flex;
+}
+
+.tabMenu .tabLink li {
+    flex: 1;
+}
+
+.tabMenu .tabLink li.active {
+    color: #00a;
+}
+
+.tabMenu .tabContent>div {
+    display: none;
+}
+
+.tabMenu .tabContent>div.active {
+    display: block;
+}
+
+.bgFixed {
+    padding: 200px 0;
+    text-align: center;
+    color: #f44;
+    background: url(../img/menu_n05.jpg) no-repeat fixed center center/cover;
+    /* 백그라운드 고정 */
+    /* background-attachment: fixed; */
+}
+
+.bgFixed h2 {
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: 3em;
+    margin-bottom: 30px;
+}
