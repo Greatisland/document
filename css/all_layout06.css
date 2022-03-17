@@ -1,0 +1,177 @@
+/* start */
+.Wrap {}
+
+
+
+
+.topBanner {
+    padding: 24px 0;
+    background: #f3f3f3;
+
+}
+
+.topBanner .container {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.topBanner .container h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: 0.04em;
+}
+.topBanner .container p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+.topBanner .container a {
+    display: inline-block;
+    height: 16px;
+    margin-left: 20px;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 300;
+    border: 1px solid #333;
+}
+.topBanner .container i {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* topBanner 2022.03.17 최종수정 */
+
+.headerWrap {
+
+}
+
+.headerWrap .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 100px;
+}
+
+.headerWrap .container>* {
+    padding: 0 15px;
+}
+
+.headerWrap .searchForm {
+    margin-left: auto;
+}
+
+.headerWrap .container .gnb {
+}
+
+.gnb>ul {
+    display: flex;
+    /* gap: 30px; */
+}
+
+.gnb>ul>li {
+    position: relative;
+    padding: 0 20px;
+}
+/* ~ 형제 선택자 (자기 뒤에 오는 요소들을 선택, 자기는 제외) */
+.gnb>ul>li~li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    width: 1px;
+    height: 13px;
+    background: #333;
+}
+
+/* .gnb>ul>li:nth-child(1)::after {
+    display: none;
+} */
+
+.headerWrap .searchForm input[type="search"] {
+    padding: 2px 0;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #333;
+}
+
+.headerWrap .searchForm input[type="search"]::placeholder {
+    font-size: 13px;
+    color: #494949;
+}
+
+.headerWrap .searchForm input[type="search"]:focus::placeholder {
+    color: transparent;
+}
+
+.headerWrap .searchForm button {
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.headerWrap .searchForm button i {
+    font-size: 15px;
+    color: #fff;
+    background: #333;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+
+.mainVisual .visualSlide {
+    border-top: 1px solid #ddd;
+}
+
+.mainVisual .visualSlide figure {
+    height: 600px;
+    background: #333;
+}
+
+.mainVisual .visualSlide .item01 {
+    background: url(../img/images/mainvisual01.jpg) no-repeat center center/cover;
+}
+.mainVisual .visualSlide .item02 {
+    background: url(../img/images/mainvisual02.jpg) no-repeat center center/cover;
+}
+.mainVisual .visualSlide .item03 {
+    background: url(../img/images/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+.mainVisual .visualSlide .slick-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.mainVisual .visualSlide .slick-dots li {
+    width: 100px;
+    height: 5px;
+    background: #333;
+    transition: 0.5s;
+}
+
+.mainVisual .visualSlide .slick-dots li::after {
+    content: "";
+    display: block;
+    height: 5px;
+    background: #ff0;
+}
+
+.mainVisual .visualSlide .slick-dots li.slick-active {
+    background: #fff;
+}
+
+.mainVisual .visualSlide .slick-dots button {
+    display: none;
+}

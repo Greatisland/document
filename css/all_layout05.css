@@ -11,11 +11,14 @@
 }
 .buttonWrap {
     position: relative;
+    width: 1200px;
+    margin: 0 auto;
 }
 .buttonWrap i {
     position: absolute;
     top: 0;
-    left: 65%;
+    left: 50%;
+    margin-left: 15px;
 }
 .tabMenu {
     padding: 100px 0;
