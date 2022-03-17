@@ -135,6 +135,49 @@
     background: #333;
 }
 
+.mainVisual .visualSlide figure.slick-active {
+    color: #ddd;
+    transition: 2s;
+}
+
+.mainVisual .visualSlide figure .inner {
+    width: 1200px;
+    margin: 300px auto 0 auto;
+    padding: 0 15px;
+    color: #fff;
+}
+/* transition: 시간 딜레이 */
+.mainVisual .visualSlide figure .inner h3 {
+    opacity: 0;
+    transform: translateY(200px);
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 30px;
+    text-shadow: 0 0 2px #333;
+    transition: 1s 0.5s;
+}
+
+.mainVisual .visualSlide figure .inner p {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: 1s 1s;
+}
+
+.mainVisual .visualSlide figure.slick-active .inner h3 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.mainVisual .visualSlide figure.slick-active .inner p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mainVisual .visualSlide figure .inner p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
 .mainVisual .visualSlide .item01 {
     background: url(../img/images/mainvisual01.jpg) no-repeat center center/cover;
 }
@@ -164,12 +207,18 @@
 .mainVisual .visualSlide .slick-dots li::after {
     content: "";
     display: block;
-    height: 5px;
-    background: #ff0;
+    width: 0;
+    height: 100%;
+    background: rgb(143, 39, 44);
+}
+
+.mainVisual .visualSlide .slick-dots li.slick-active::after {
+    width: 100%;
+    transition: 2s;
 }
 
 .mainVisual .visualSlide .slick-dots li.slick-active {
-    background: #fff;
+    background: #333;
 }
 
 .mainVisual .visualSlide .slick-dots button {
