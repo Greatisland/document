@@ -60,10 +60,7 @@ $('.allProduct i:last-child').on('click', function(){
     $('.aproductSlide').slick('slickNext')
 });
 
-//var r = $('.allProduct .aproductSlide figure').index();
-
-//$('.allProduct .aproductSlide figure').eq(r+5).addClass('oyes');
-
+// 슬라이드 중간에 효과주기
 $('.aproductSlide figure').eq(7).addClass('oyes')
 $('.aproductSlide').on('afterChange', function(e,s,c){
     console.log(c);
