@@ -440,6 +440,10 @@
     margin: 0 auto;
 }
 
+.allProduct .aproductSlide {
+    
+}
+
 .allProduct .aproductSlide figure {
     padding: 0 15px;
 }
@@ -459,7 +463,7 @@
 }
 
 .allProduct .inner {
-    margin-bottom: 20px;
+    
 }
 
 .allProduct .inner+strong {
@@ -511,9 +515,10 @@
 }
 
 .allProduct .aproductSlide figure img {
-    transition: 0.5s;
+    transition: 0.4s;
+    transform: scale(0.8);
 }
 
 .allProduct .aproductSlide figure.oyes img {
-    transform: scale(1.2);
+    transform: scale(1);
 }
