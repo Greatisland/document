@@ -1,9 +1,4 @@
 /* start */
-.Wrap {}
-
-
-
-
 .topBanner {
     padding: 24px 0;
     background: #f3f3f3;
@@ -44,10 +39,6 @@
     cursor: pointer;
 }
 /* topBanner 2022.03.17 최종수정 */
-
-.headerWrap {
-
-}
 
 .headerWrap .container {
     display: flex;
@@ -131,15 +122,6 @@
 .mainVisual .visualSlide figure {
     height: 600px;
     background: #333;
-}
-
-.mainVisual .visualSlide figure i {
-    color:rgb(143, 39, 44);
-    font-size: 100px;
-}
-
-.mainVisual .visualSlide figure.yes i {
-    animation: heart 1s infinite;
 }
 
 /* 키프레임(애니메이션 짜는 방법) */
@@ -522,3 +504,140 @@
 .allProduct .aproductSlide figure.oyes img {
     transform: scale(1);
 }
+
+.movieBg {
+    padding: 200px 0;
+    background: #000;
+    filter: grayscale(1);
+
+    color: #fff;
+    text-align: center;
+}
+
+.movieBg h2 {
+    font-size: 19px;
+    font-weight: 100;
+    letter-spacing: 0.4em;
+    margin-bottom: 15px;
+}
+
+.movieBg p {
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: -0.025;
+    margin-bottom: 30px;
+}
+
+.movieBg i {
+    font-size: 20px;
+    margin: 3px;
+    padding: 10px;
+    background: #333;
+    border-radius: 10px;
+}
+
+.movieBg i:hover {
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+.customerArea {
+    padding: 100px 0;
+    background: #f2f2f2;
+}
+
+.customerArea .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.customerArea .container>div {
+    position: relative;
+    flex: 1;
+    padding: 0 15px;
+}
+
+.customerArea .container>div .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: yellowgreen;
+    border: 3px solid yellowgreen;
+    padding: 15px 30px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.customerArea .container>div .btn:hover {
+    background: transparent;
+    border: 3px solid yellowgreen;
+    padding: 15px 30px;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.customerArea .tabMenu {
+    display: flex;
+}
+
+.customerArea .tabMenu>li {
+    flex: 1;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.customerArea .tabMenu>li.active {
+    background: #369;
+}
+
+.customerArea .tabMenu>li~li {
+    border-left: 1px solid #fff;
+}
+
+.customerArea .tabContent>div {
+    display: none;
+}
+
+.customerArea .tabContent>div.active {
+    display: block;
+}
+
+.customerArea .tabContent a {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 2px;
+    border: 1px solid #ddd;
+}
+
+.customerArea .tabContent strong {
+    display: block;
+    width: 400px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.customerArea .lastarea {
+    position: relative;
+}
+
+.customerArea .lastarea i {
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 25px;
+    color: #f00;
+}
+
+.customerArea .lastarea:hover i {
+    display: block;
+    animation: heart 1s infinite;
+}
+
