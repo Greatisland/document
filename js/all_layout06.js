@@ -47,9 +47,11 @@ $(function () {
     $('.aproductSlide').slick({
         arrows: false,
         dots: true,
-        autoplay: false,
+        autoplay: true,
         slidesToShow: 5,
-        centermode: true,
+        slidesToScroll: 1,
+        centerMode: true,
+        focusOnSelect: true,
     });
 
     $('.allProduct i:first-child').on('click', function () {
@@ -61,12 +63,14 @@ $(function () {
     });
 
     // 슬라이드 중간에 효과주기
-    $('.aproductSlide figure').eq(7).addClass('oyes')
+    $('.aproductSlide figure').eq(6).addClass('oyes')
     $('.aproductSlide').on('afterChange', function (e, s, c) {
         console.log(c);
         var r = $('.allProduct .aproductSlide figure').index();
-        $('.aproductSlide figure').eq(r + c + 7).addClass('oyes').siblings().removeClass('oyes');
+        $('.aproductSlide figure').eq(r + c + 6).addClass('oyes').siblings().removeClass('oyes');
     })
+
+    $(this).on
 
 
 
