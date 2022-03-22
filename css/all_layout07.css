@@ -427,7 +427,7 @@
     width: 450px;
 }
 
-.eventProduct .left>figure img {
+.eventProduct .left>figure {
     position: absolute;
     bottom: 0;
     right: 50px;
@@ -461,7 +461,7 @@
 .eventProduct h2::after {
     position: absolute;
     bottom: 0;
-    right: 10px;
+    right: 0;
     content: "";
     display: block;
     width: 60px;
@@ -515,7 +515,9 @@
 
 .allProduct .aproductSlide figure {
     padding: 0 15px;
-    border: 1px solid #333;
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
 
 }
 
