@@ -65,10 +65,9 @@ $(function () {
     // 슬라이드 중간에 효과주기
     $('.aproductSlide figure').eq(6).addClass('oyes')
     $('.aproductSlide').on('afterChange', function (e, s, c) {
-        console.log(c);
         var r = $('.allProduct .aproductSlide figure').index();
         $('.aproductSlide figure').eq(r + c + 6).addClass('oyes').siblings().removeClass('oyes');
-    })
+    });
 
     $(this).on
 
@@ -106,9 +105,36 @@ $(function () {
         var idx = $(this).index();
         $(this).addClass('active').siblings().removeClass('active');
         $('.tabContent>div').eq(idx).addClass('active').siblings().removeClass('active');
+    });
 
+    //link
 
+    $('#link').on('change', function(){
+        let link = $(this).val();
+        if (!link) return;
+        window.open(link)
+    });
+
+    //popup
+
+    $('.popup01 button').on('click', function(){
+        $(this).parent().hide();
+    });
+
+    $('.toTop').on('click', function(){
+        $('html,body').animate({scrollTop:0})
+    });
+
+    //if문 사용방법
+    $(window).on('scroll',function(){
+        let sct = $(window).scrollTop();
+        if (sct > 500) {
+            $('.toTop').fadeIn();
+        }else{
+            $('.toTop').fadeOut();
+        }
     })
+
 
     ///////////////////////////////////
 })

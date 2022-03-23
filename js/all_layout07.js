@@ -69,7 +69,6 @@ $(function () {
         $('.aproductSlide figure').eq(r + c + 6).addClass('oyes').siblings().removeClass('oyes');
     });
 
-    $(this).on
 
 
 
@@ -120,6 +119,21 @@ $(function () {
     $('.popup01 button').on('click', function(){
         $(this).parent().hide();
     })
+    
+    $('.toTop').on('click', function(){
+        $('html,body').animate({scrollTop:0})
+    });
+
+    //if문 사용방법
+    $(window).on('scroll',function(){
+        let sct = $(window).scrollTop();
+        if (sct > 500) {
+            $('.toTop').fadeIn();
+        }else{
+            $('.toTop').fadeOut();
+        }
+    })
+
 
     ///////////////////////////////////
 })
