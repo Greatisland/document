@@ -863,3 +863,24 @@
     font-size: 14px;
     cursor: pointer;
 }
+
+.toTop {
+    display: none;
+    position: fixed;
+    inset: auto 50px 100px auto;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.toTop i {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    font-size: 20px;
+}
+
+.toTop:hover i {
+    background: #f2f2f2;
+    color: #333;
+}
