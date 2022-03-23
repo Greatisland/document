@@ -315,7 +315,9 @@
 }
 
 .mainProduct .container figure {
+    opacity: 0;
     position: relative;
+    top: 100px;
     padding: 0 15px;
     flex: 1;
 }
