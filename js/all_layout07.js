@@ -124,15 +124,40 @@ $(function () {
         $('html,body').animate({scrollTop:0})
     });
 
-    //if문 사용방법
+    //if 사용방법
     $(window).on('scroll',function(){
         let sct = $(window).scrollTop();
         if (sct > 500) {
             $('.toTop').fadeIn();
         }else{
             $('.toTop').fadeOut();
+        }        
+    });
+
+
+
+    //구현 못하겠다 gg 
+    $(window).on('scroll',function(){
+        var sct = $(window).scrollTop();
+        if (sct > 400) {
+
+            
+            setTimeout(function() {
+        
+                $('.mainProduct .container figure:nth-child(1)').animate({opacity: "1","top":"0"});
+                $('.mainProduct .container figure:nth-child(2)').animate({opacity: "1","top":"0"},1000);
+                $('.mainProduct .container figure:nth-child(3)').animate({opacity: "1","top":"0"},1500);
+                $('.mainProduct .container figure:nth-child(4)').animate({opacity: "1","top":"0"},2000);
+        
+            },100);
+
+
+            
         }
-    })
+        else if (sct == 0) {
+            $('.mainProduct .container figure').css({opacity: "0","top":"100px"});
+        };
+    });
 
 
     ///////////////////////////////////
