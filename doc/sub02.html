@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We all my i'm not ghost</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .Wrap {}
+
+        header,
+        footer {
+            height: 100px;
+            background: #ddd;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        article {
+            min-height: 500px;
+            letter-spacing: -0.025em;
+        }
+
+        .subPage .infoMation {
+            padding: 100px 0;
+        }
+
+        .subPage .infoMation h2 {
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .subPage .infoMation h2::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: #333;
+            margin: 15px auto;
+        }
+
+        .subPage .infoMation>p {
+            text-align: center;
+            font-size: 15px;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+
+        .subPage .infoMation .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .subPage .infoMation .container figure {
+            width: 100%;
+            margin-bottom: 40px;
+            padding: 0 15px;
+        }
+
+        .subPage .infoMation .container .left {
+            width: 35%;
+            padding: 0 15px;
+        }
+
+        .subPage .infoMation .container .left h3 {
+            text-align: center;
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .subPage .infoMation .container .left h3::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 150px;
+            background: #333;
+            margin: 30px auto;
+        }
+
+        .subPage .infoMation .container .right {
+            width: 65%;
+            padding: 0 15px;
+        }
+
+        .subPage .infoMation .container .right strong {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .root_daum_roughmap {
+            width: 100% !important;
+            border: 1px solid #333;
+        }
+        .wrap_controllers {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Wrap">
+        <header>
+            헤더
+        </header>
+        <article class="subPage">
+            <section class="infoMation">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, exercitationem porro magnam ipsum
+                    quia
+                    sequi repellat. Quidem molestias numquam odio?</p>
+                <div class="container">
+                    <figure>
+                        <!-- * 카카오맵 - 지도퍼가기 -->
+                        <!-- 1. 지도 노드 -->
+                        <div id="daumRoughmapContainer1648006527049"
+                            class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                        <!--2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+                        <script charset="UTF-8" class="daum_roughmap_loader_script"
+                            src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                        <!-- 3. 실행 스크립트 -->
+                        <script charset="UTF-8">
+                            new daum.roughmap.Lander({
+                                "timestamp": "1648006527049",
+                                "key": "29jya",
+                                "mapWidth": "640",
+                                "mapHeight": "360"
+                            }).render();
+                        </script>
+                        
+                    </figure>
+                    <div class="left">
+                        <h3>Lorem ipsum dolor sit, amet consectetur<br>
+                            adipisicing elit.</h3>
+
+                    </div>
+                    <div class="right">
+                        <p>
+                            <strong>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                                Atque aliquid, rerum a amet libero vitae aut.
+                            </strong>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br>
+                            Alias nemo, natus atque perferendis laudantium, aliquid aut tempore sint,<br><br>
+                            fuga accusantium recusandae. Cumque laborum distinctio quo facere ullam necessitatibus,
+                            explicabo libero!<br><br><br>
+
+                            <strong>Lorem, ipsum dolor.</strong>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <footer>
+            &copy; ??
+        </footer>
+    </div>
+</body>
+
+</html>
