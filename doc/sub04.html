@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me? Oh my, I'm that ghost </title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .subPage .hospitalContent {
+            padding: 100px 0;
+            letter-spacing: -0.025em;
+        }
+
+        .subPage .hospitalContent h2 {
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+            margin: 0 0 20px 0;
+        }
+
+        .subPage .hospitalContent h2::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ff0101;
+            transform: translate(-10px, -15px);
+        }
+
+        .subPage .hospitalContent>p {
+            font-size: 15px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .subPage .hospitalContent .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .subPage .hospitalContent .container .top {
+            display: flex;
+            width: 100%;
+            margin: 0 0 50px 0;
+        }
+
+        .subPage .hospitalContent .container .left {
+            width: 50%;
+        }
+
+        .subPage .hospitalContent .container .right {
+            width: 50%;
+        }
+
+        .subPage .hospitalContent figure {
+            position: relative;
+            flex: 1;
+            height: 500px;
+            overflow: hidden;
+            filter: grayscale(1);
+        }
+
+        .subPage .hospitalContent figure:hover {
+            filter: grayscale(0);
+        }
+
+        .subPage .hospitalContent figure:nth-child(1) {
+            background: url(../img/hiphople/slide01.jpg) no-repeat center center/cover;
+        }
+
+        .subPage .hospitalContent figure:nth-child(2) {
+            background: url(../img/hiphople/slide02.jpg) no-repeat center center/cover;
+        }
+
+        .subPage .hospitalContent figure:nth-child(3) {
+            background: url(../img/hiphople/slide03.jpg) no-repeat 70% center/cover;
+        }
+
+        .subPage .hospitalContent figure:nth-child(4) {
+            background: url(../img/hiphople/slide01.jpg) no-repeat center center/cover;
+        }
+
+        .subPage .hospitalContent figure .inner {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 30px 20px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .subPage .hospitalContent figure:hover .inner {
+            left: 0;
+        }
+
+        .subPage .hospitalContent figure .inner h3 {
+            font-size: 20px;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 0 0 20px 0;
+            margin: 0 0 30px 0;
+        }
+
+        .subPage .hospitalContent figure .inner p {
+            flex: 1;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+        .subPage .hospitalContent a {
+            width: 120px;
+            height: 30px;
+            line-height: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            text-align: center;
+        }
+
+        .subPage .hospitalContent .left {
+            position: relative;
+            padding: 0 0 0 30px;
+        }
+
+        .subPage .hospitalContent .left::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 0;
+            display: block;
+            width: 5px;
+            height: 55px;
+            background: #333;
+        }
+
+        .subPage .hospitalContent .left h3 {
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+        }
+
+        .subPage .hospitalContent .left p {
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        .dotList {
+            line-height: 1.6;
+        }
+
+        .dotList>li {
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        .dotList>li::before {
+            content: "";
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            background: #f00;
+            vertical-align: middle;
+            margin: 0 10px 0 0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Wrap">
+        <header>
+            header
+        </header>
+
+
+
+
+        <article class="subPage">
+            <section class="hospitalContent">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi natus aspernatur rem?</p>
+
+
+                <div class="container">
+                    <div class="top">
+                        <figure>
+                            <div class="inner">
+                                <h3>Lorem, ipsum.</h3>
+                                <p>Lorem ipsum dolor sit.<br />
+                                    adipisicing elit. A, quia?</p>
+
+                                <a href="#!">MORE</a>
+                            </div>
+                        </figure>
+                        <figure>
+                            <div class="inner">
+                                <h3>Lorem, ipsum.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur<br />
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, obcaecati. <br />
+                                    adipisicing elit. A, quia?</p>
+
+                                <a href="#!">MORE</a>
+                            </div>
+                        </figure>
+                        <figure>
+                            <div class="inner">
+                                <h3>Lorem, ipsum.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur<br />
+                                    adipisicing elit. A, quia?</p>
+
+                                <a href="#!">MORE</a>
+                            </div>
+                        </figure>
+                        <figure>
+                            <div class="inner">
+                                <h3>Lorem, ipsum.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur<br />
+                                    adipisicing elit. A, quia?</p>
+
+                                <a href="#!">MORE</a>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="left">
+                        <h3>Lorem, ipsum dolor.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                    </div>
+                    <ul class="right dotList">
+                        <li>Me? Oh my, I'm that ghost</li>
+                        <li>Me? Oh my, I'm that ghost</li>
+                        <li>Me? Oh my, I'm that ghost</li>
+                        <li>Me? Oh my, I'm that ghost</li>
+                        <li>Me? Oh my, I'm that ghost</li>
+                    </ul>
+                </div>
+
+
+            </section>
+        </article>
+
+
+
+
+
+
+
+
+        <footer>
+            &copy; lee.
+        </footer>
+    </div>
+</body>
+
+</html>
