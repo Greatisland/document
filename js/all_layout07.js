@@ -136,7 +136,7 @@ $(function () {
 
 
 
-    //구현 못하겠다 gg 
+    //메인프로덕트 스크롤효과 
     $(window).on('scroll',function(){
         var sct = $(window).scrollTop();
         if (sct > 400) {
