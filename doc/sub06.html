@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me? Oh my, I'm that ghost</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+        #subPage .info__content {
+            padding: 100px;
+            letter-spacing: -0.025em;
+        }
+
+        #subPage .info__content h2 {
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        #subPage .info__content h2::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: #333;
+            margin: 10px auto;
+        }
+
+        #subPage .info__content>p {
+            font-size: 15px;
+            font-weight: 300;
+            text-align: center;
+            margin: 0 0 50px 0;
+        }
+
+        .fixed_bg {
+            background: url('../img/hiphople/slide01.jpg') no-repeat fixed center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+            margin: 0 0 100px 0;
+        }
+
+        .fixed_bg strong {
+            display: block;
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 30px;
+            font-weight: 900;
+            margin: 0 0 10px 0;
+        }
+
+        .fixed_bg p {
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        #subPage .info__content .container {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto 100px auto;
+        }
+
+        #subPage .info__content .container figure {
+            padding: 0 15px;
+        }
+
+        #subPage .info__content .container .inner {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0 0 20px 20px;
+            border-bottom: 5px solid rgb(189, 10, 10);
+        }
+
+        #subPage .info__content .container .text {
+            position: absolute;
+            top: calc(100% - 60px);
+            left: 0;
+            background: #333;
+            color: #fff;
+            padding: 20px 15px;
+            height: 100%;
+            width: 100%;
+            transition: 0.5s;
+        }
+
+        #subPage .info__content .container .inner:hover .text {
+            top: calc(100% - 160px);
+        }
+
+        #subPage .info__content .text strong {
+            font-size: 30px;
+            font-weight: 900;
+        }
+
+        #subPage .info__content .text strong::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background: #fff;
+            margin: 15px 0 25px 0;
+        }
+
+        #subPage .info__content figure:nth-child(1) strong {
+            color: #72dab7;
+        }
+        #subPage .info__content figure:nth-child(2) strong {
+            color: #6dccac;
+        }
+        #subPage .info__content figure:nth-child(3) strong {
+            color: #5aac91;
+        }
+        #subPage .info__content figure:nth-child(4) strong {
+            color: #4f967e;
+        }
+
+        #subPage .info__content figure:nth-child(1) .inner {
+            border-color: #72dab7;
+        }
+        #subPage .info__content figure:nth-child(2) .inner {
+            border-color: #6dccac;
+        }
+        #subPage .info__content figure:nth-child(3) .inner {
+            border-color: #5aac91;
+        }
+        #subPage .info__content figure:nth-child(4) .inner {
+            border-color: #4f967e;
+        }
+
+        #subPage .info__content .danger {
+            width: 1170px;
+            margin: 0 auto;
+            background: #f3f3f3;
+            padding: 30px 20px;
+        }
+
+        #subPage .info__content .danger strong {
+            display: block;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 30px 0;
+        }
+
+        #subPage .info__content .danger i {
+            margin-right: 10px;
+        }
+
+        #subPage .info__content .danger p {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.4;
+            margin: 0 0 30px 0;
+        }
+
+        #subPage .info__content .danger .list {
+            line-height: 1.6;
+        }
+
+        #subPage .info__content .danger .list li::before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background: #f00;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin: 0 10px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Wrap">
+        <header>
+            header
+        </header>
+
+        <article id="subPage">
+            <section class="info__content">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque odit numquam eaque?</p>
+                <div class="fixed_bg">
+                    <strong>"Lorem ipsum dolor sit amet consectetur."</strong>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium harum maxime laudantium
+                        molestiae.</p>
+                </div>
+                <div class="container">
+                    <figure>
+                        <div class="inner">
+                            <img src="../img/hiphople/album05.jpg" alt="">
+                            <div class="text">
+                                <strong>01</strong>
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="inner">
+                            <img src="../img/hiphople/album02.jpg" alt="">
+                            <div class="text">
+                                <strong>02</strong>
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="inner">
+                            <img src="../img/hiphople/album03.jpg" alt="">
+                            <div class="text">
+                                <strong>03</strong>
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="inner">
+                            <img src="../img/hiphople/album04.jpg" alt="">
+                            <div class="text">
+                                <strong>04</strong>
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            </div>
+                        </div>
+                    </figure>
+
+                </div>
+                <div class="danger">
+                    <strong><i class="xi-close"></i>Lorem ipsum dolor sit.</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum harum modi alias, numquam
+                        error, ducimus tenetur velit assumenda dolor, explicabo sapiente non exercitationem quia quo
+                        ipsam iure saepe provident possimus!</p>
+                    <ul class="list">
+                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptas molestiae quae.
+                        </li>
+                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptas molestiae quae.
+                        </li>
+                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptas molestiae quae.
+                        </li>
+                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptas molestiae quae.
+                        </li>
+                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptas molestiae quae.
+                        </li>
+                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptas molestiae quae.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+
+        <footer>
+            &copy; lee.
+        </footer>
+    </div>
+</body>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+    $(function () {
+
+
+
+    })
+</script>
+
+</html>

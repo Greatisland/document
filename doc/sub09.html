@@ -1,0 +1,288 @@
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me? Oh my, I'm that ghost</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        #subPage {
+            letter-spacing: -0.025em;
+        }
+
+        #subPage .info__content {
+            padding: 100px 0;
+        }
+
+        #subPage .info__content h2 {
+            font-size: 23px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        #subPage .info__content h2::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background: #333;
+            margin: 15px auto;
+        }
+
+        #subPage .info__content>p {
+            font-size: 15px;
+            font-weight: 300;
+            text-align: center;
+            margin: 0 0 50px 0;
+        }
+
+        #subPage .info__content .fixed_bg {
+            padding: 150px 0;
+            background: url(../img/images/mainvisual01.jpg) no-repeat fixed center center/cover;
+            text-align: center;
+            color: #fff;
+            filter: grayscale(1);
+        }
+
+        #subPage .info__content .fixed_bg strong {
+            display: block;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+        }
+
+        #subPage .info__content .fixed_bg p {
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        #subPage .info__content .container {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #subPage .info__content .container .itm {
+            position: relative;
+            flex: 1;
+            padding: 100px 15px;
+        }
+
+        #subPage .info__content .container .itm h3 {
+            font-size: 21px;
+            font-weight: 900;
+            text-align: center;
+            margin: 0 0 30px 0;
+        }
+
+        #subPage .info__content .container .itm i {
+            position: absolute;
+            font-size: 33px;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            background: #333;
+            padding: 20px;
+            border-radius: 50%;
+        }
+
+        #subPage .info__content .itm:nth-child(1) i {
+            background: rgb(155, 20, 189);
+        }
+
+        #subPage .info__content .itm:nth-child(2) i {
+            background: rgb(20, 113, 189);
+        }
+
+        #subPage .info__content .itm:nth-child(3) i {
+            background: rgb(164, 189, 20);
+        }
+
+        #subPage .info__content .dot__list li {
+            position: relative;
+            padding: 5px 15px;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+        #subPage .info__content .dot__list li::before {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background: rgb(138, 142, 179);
+            margin: 0 10px 0 0;
+        }
+
+        #subPage .info__event h2 {
+            font-size: 23px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        #subPage .info__event h2::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background: #333;
+            margin: 15px auto;
+        }
+
+        #subPage .info__event>p {
+            font-size: 15px;
+            font-weight: 300;
+            text-align: center;
+            margin: 0 0 40px 0;
+        }
+
+        #subPage .info__event .bg__box {
+            /* background: linear-gradient(to bottom, transparent 50%, rgb(151, 131, 122) 50%); */
+            /* background: linear-gradient(transparent 25%,#dc3545 25%,#dc3545 25%,#dc3545 25%); */
+
+            /* linear-gradient의 경우 그라디언트 효과를 빼려면 그라디언트 시작지점의 영역을 이어받는 영역이 덮히도록 크게 설정해야 한다. */
+            background: linear-gradient(to top, #dc3545 51%, transparent 49%);
+        }
+
+        #subPage .info__event .bg__box .container {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #subPage .info__event .bg__box .container>div {
+            flex: 1;
+            padding: 0 15px;
+        }
+
+        #subPage .info__event .bg__box .txt {
+            border: 2px solid #333;
+            background: #fff;
+            padding: 30px 15px;
+        }
+
+        #subPage .info__event .bg__box .txt h3 {
+            font-size: 17px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+        }
+
+        #subPage .info__event .bg__box .txt p {
+            font-size: 15px;
+            font-weight: 300;
+            margin: 0 0 60px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="Wrap">
+        <header>
+            header
+        </header>
+
+
+
+        <article id="subPage">
+            <section class="info__content">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque odit numquam eaque?</p>
+                <div class="fixed_bg">
+                    <strong>"Lorem ipsum dolor sit amet consectetur."</strong>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium harum maxime laudantium
+                        molestiae.</p>
+                </div>
+                <div class="container">
+                    <div class="itm">
+                        <i class="xi-instagram"></i>
+                        <h3>Lorem, ipsum.</h3>
+                        <ul class="dot__list">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, iusto.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, iusto.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, iusto.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, iusto.</li>
+                        </ul>
+                    </div>
+                    <div class="itm">
+                        <i class="xi-facebook"></i>
+                        <h3>Lorem, ipsum.</h3>
+                        <ul class="dot__list">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, iusto.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, iusto.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, iusto.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, iusto.</li>
+                        </ul>
+                    </div>
+                    <div class="itm">
+                        <i class="xi-kakaotalk"></i>
+                        <h3>Lorem, ipsum.</h3>
+                        <ul class="dot__list">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, iusto.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, iusto.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, iusto.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, iusto.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="info__event">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque odit numquam eaque?</p>
+                <div class="bg__box">
+                    <div class="container">
+                        <div class="itm">
+                            <div class="txt">
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore et mollitia labore!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="itm">
+                            <div class="txt">
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore et mollitia labore!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="itm">
+                            <div class="txt">
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore et mollitia labore!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="itm">
+                            <div class="txt">
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore et mollitia labore!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+
+        <footer>
+            &copy; lee.
+        </footer>
+    </div>
+
+</body>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+    $(function () {
+
+
+    })
+</script>
+
+</html>
