@@ -1,0 +1,327 @@
+* {margin:0; padding: 0;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #000;}
+/* img {display: block;} */
+
+/* ----------------------------header----------------------------------------- */
+
+.logo {
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.gnb {
+    width: 990px;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.gnb>ul {
+    float: left;
+}
+
+.gnb>ul li {
+    float: left;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 100px;
+}
+
+.gnb li a {display: block;}
+
+.gnb>ul li~li {
+    margin: 0 0 0 100px;
+}
+
+.gnb .member {
+    float: right;
+}
+
+.gnb .member li {
+    position: relative;;
+    float: left;
+    font-size: 11px;
+    line-height: 100px;
+    margin: 0 0 0 15px;
+}
+
+.gnb .member li::after {
+    position: absolute;
+    bottom: 40%;
+    left: 0;
+    content: "";
+    display: block;
+    background: #acacac;
+    width: 100%;
+    height: 1px;
+}
+
+
+.gnb .member li a {color: #acacac;}
+
+/* ------------------------------slide------------------------------------ */
+
+section.slide img {width: 100%;}
+
+/* ---------------------------------main_contents--------------------------- */
+
+
+.main_contents {
+    background: #f4f4f4;
+    padding: 0 0 100px 0;
+}
+
+.back {
+    width: 990px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.main_contents h2 {
+    margin: 50px 0 30px 0;
+    font-size: 23px;
+    font-weight: normal;
+}
+
+.main_contents .product_top {margin: 0 0 10px 0;}
+
+.main_contents .product {
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+
+.main_contents .itm01 ,.main_contents .itm02 {
+    width: 490px;
+    float: left;
+    margin: 0 0 10px 0;
+}
+
+.main_contents .itm01 {margin: 0 10px 10px 0;}
+
+.main_contents .itm01>div{
+    width: 240px;
+    height: 240px;
+    float: left;
+}
+
+.main_contents .itm01> .product {height: 490px;}
+
+.main_contents .itm01>div:nth-child(1) {margin: 0 10px 0 0;}
+
+.main_contents .itm01>div .product {width: 240px; height: 240px;}
+
+.main_contents .itm02 .product_top>div {
+    width: 240px;
+    height: 240px;
+    float: left;
+}
+
+.main_contents .itm02 .product_top {
+    overflow: hidden;
+    margin: 0 0 10px 0;
+}
+
+.main_contents .itm02 .product_top>div:first-child {margin: 0 10px 0 0;}
+
+.main_contents .itm02 .product {height: 240px;}
+
+.main_contents .itm03>div {
+    height: 240px;
+    float: left;
+    overflow: hidden;
+}
+
+.main_contents .itm03>div~div {margin: 0 0 0 10px;}
+
+.main_contents .itm03>div:nth-child(1), .main_contents .itm03>div:nth-child(3) {
+    width: 240px;
+}
+
+.main_contents .itm03>div:nth-child(2) {width: 490px;}
+
+.main_contents .txt, .main_contents .cover {
+    position: absolute;
+}
+
+.main_contents .txt {
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    left: -100%;
+    transform: translate(-50%,-50%);
+    transition: left 0.2s 0.3s;
+    color: #fff;
+}
+
+.main_contents .cover {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s;
+    background: rgba(94,63,231,0.7);
+}
+
+.main_contents .txt p {
+    margin: 0 0 30px 0;
+}
+
+/* .main_contents .product span {
+    padding: 3px 10px;
+    cursor: pointer;
+    border: 1px solid #fff;
+} */
+
+.main_contents .product span {
+    position : absolute;
+    top: 70%;
+    left: -50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    padding: 3px 7px;
+    transition: left 0.2s 0.3s;
+    cursor: pointer;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.main_contents .product:hover span {left: 50%;}
+.main_contents .product:hover .txt {left: 50%;}
+.main_contents .product:hover .cover {bottom: 0;}
+.main_contents .product span:hover~.cover {
+    background: rgb(255, 255, 255,0.7);
+}
+.main_contents .product span:hover~.txt{color:#000;}
+.main_contents .product span:hover{color:#000; border: 1px solid #000;}
+
+/* --------------------------main_contents------------------------- */
+
+section.sns {
+    width: 990px;
+    margin: 0 auto 100px auto;
+    overflow: hidden;
+}
+
+.sns h2 {
+    margin: 50px 0 30px 0;
+    font-size: 23px;
+    font-weight: normal;
+}
+
+.sns>div figure {
+    float: left;
+    width: 33.333333%;
+}
+
+.sns>div figure div {float: left;}
+
+.sns>div figure div:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.sns>div figure div:nth-child(2) {
+    width: 150px;
+    padding: 20px;
+}
+
+/* ---------------------------------sns------------------------------------ */
+
+footer {
+    background: #292929;
+    overflow: hidden;
+}
+
+footer .innerfooter {
+    width: 990px;
+    margin: 0 auto;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.footer_nav {margin: 0 0 50px 0;}
+
+.footer_nav>li {
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+.footer_nav>li>a {
+    color: #fff;
+    font-size: 15px;
+}
+
+.footer_nav>li>ul {padding: 20px 0 0 0;}
+.footer_nav>li .con01, .footer_nav>li .con02 {
+    float: left;
+    width: 50%;
+}
+
+.footer_nav>li>ul li {
+    padding: 3px 0;
+    font-size: 13px;
+}
+
+.footer_nav>li>ul li a {color: #6d6d6d;}
+
+
+
+.footer_bottom {
+    width: 990px;
+    margin: 0 auto;
+}
+footer .logic {
+    width: 100%;
+    border-top: 1px solid #6d6d6d;
+    border-bottom: 1px solid #6d6d6d;
+    overflow: hidden;
+}
+
+footer .logic ul {float: left;}
+footer .logic ul li {float: left;}
+
+footer .logic ul:first-child li {
+    font-size: 12px;
+    letter-spacing: -0.04em;
+    padding: 8px 16px 0 0;
+    position: relative;
+}
+
+footer .logic ul:first-child li~li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 7px;
+    background: #6d6d6d;
+    position: absolute;
+    top: 13px;
+    left: -8px;
+}
+
+
+
+footer .logic ul:first-child li a {color: #acacac;}
+
+
+footer .logic ul:last-child li {
+    font-size: 13px;
+    letter-spacing: -0.04em;
+    padding: 8px 20px;
+    border-left: 1px solid #6d6d6d;
+}
+
+footer .logic ul:last-child li a {color: #fff;}
+
+address {
+    text-align: center;
+    padding: 40px 0;
+    color: #6e6e6e;
+}
+
+/* -----------------------------------footer------------------------------ */

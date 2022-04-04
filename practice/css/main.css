@@ -1,0 +1,367 @@
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: #000;}
+img {display: block;}
+
+
+/* ------------------------ header ---------------------------- */
+.outerHeader {
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+
+.innerHeader {
+    width: 1030px;
+    margin: 0 auto;
+}
+
+.innerHeader .navBox {
+    width: 100%;
+    overflow: hidden;
+}
+
+.innerHeader .navBox .brand {
+    float: left;
+}
+
+.innerHeader .navBox .gnb {
+    float: right;
+}
+
+.innerHeader .navBox .gnb li {
+    display: inline-block;
+    font-size: 11px;
+    border-right: 1px solid #000;
+    padding: 0 8px;
+    line-height: 11px;/* 이것으로 선의 크기를 조절할 수 있다.*/
+}
+
+.innerHeader .navBox .gnb ul {
+    font-size: 0;
+}
+.innerHeader .navBox .gnb li:last-child {
+    border: none;
+}
+
+.innerHeader .logoBox {
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+}
+
+.innerHeader .logoBox .logo {
+    width: 200px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+.innerHeader .logoBox .search {
+    position: absolute;
+    top: 30px; right: 0;
+}
+
+.lnbBox {
+    width: 100%;
+    height: 30px;
+    background: #1d2d51;
+}
+
+.lnbBox .lnb {
+    width: 1030px;
+    margin: 0 auto;
+}
+
+.lnbBox .lnb li {
+    display: inline-block;
+    color: #fff;
+    line-height: 30px;
+    padding: 0 25px;
+}
+
+/* --------------------Wrap---------------------------------- */
+.Wrap {
+    width: 1030px;
+    margin: 0 auto;
+}
+
+/* --------------------visualmain----------------------------- */
+.visualMain {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 0 15px 0;
+}
+
+.visualMain .visual_left {
+    width: 700px;
+    height: 530px;
+    float: left;
+    margin:0 15px 0 0;
+}
+
+.visualMain .visual_right {
+    width: 315px;
+    height: 530px;
+    float: left;
+}
+
+.visualMain .visual_right .visual_right_top {
+    margin: 0 0 15px 0;
+}
+
+.titleBox {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 0 15px 0;
+}
+
+.titlebox02 {
+    margin: 0 0 5px 0 !important;
+}
+
+.titleBox .Bar {
+    width: 400px;
+    height: 50px;
+    float: left;
+    padding: 25px 0 0 0;
+    box-sizing: border-box;
+}
+
+.titleBox .title {
+    width: 230px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+}
+
+.visualSub {
+    width: 100%;
+    margin: 0 0 45px 0;
+    border: 1px solid #d8d8d8;box-sizing: border-box;
+}
+
+.eventBanner {
+    width: 100%;
+    margin: 0 0 45px 0;
+}
+
+input {display: none;}
+
+.label {
+    width: 100%;
+    height: 13px;
+    overflow: hidden;    
+    position: relative;
+    margin: 0 0 15px 0;
+}
+
+.label label {
+    display: block;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    font-size: 13px;
+    color: #a0a0a0;
+    line-height: 13px;
+    cursor: pointer;
+}
+
+.label label:first-child {left: 45%;}
+
+.label label:last-child {left: 55%;}
+
+.sheet01 .content {
+    width: 507px;
+    float: left;
+}
+
+.sheet01 .content01 {margin: 0 15px 0 0;}
+
+.sheet01 .content figure {
+    float: left;
+    border: 1px solid #d8d8d8;box-sizing: border-box;
+    overflow: hidden;
+}
+
+.sheet01 .content01 figure~figure {width: 246px;}
+
+.sheet01 .content01 figure:nth-child(1) {margin: 0 0 15px 0;}
+.sheet01 .content01 figure:nth-child(2) {margin: 0 15px 0 0;}
+
+.sheet01 .content02 figure {width: 100%;}
+
+.sheet01 .content02 figure:nth-child(1) {
+    width: 246px;
+    margin: 0 15px 15px 0;
+}
+.sheet01 .content02 figure:nth-child(2) {width: 246px;}
+
+.sheet02 {
+    display: none;
+    width: 100%;
+    height: 669px;
+    border: 1px solid #d8d8d8;box-sizing: border-box;
+}
+
+#tab01:checked~.sheet01 {display: block;}
+#tab02:checked~.sheet02 {display: block;}
+#tab02:checked~.sheet01 {display: none;}
+
+#tab01:checked~.label label:first-child {color: #474747; font-weight: bold;}
+#tab02:checked~.label label:last-child {color: #474747; font-weight: bold;}
+
+.sheet01, .sheet02 {
+    overflow: hidden;
+    margin: 0 0 45px 0;
+}
+
+.titlebox03 {margin: 0 0 30px 0;}
+
+.product {
+    overflow: hidden;
+    margin: 0 0 45px 0;
+}
+
+.product .itm {
+    width: 333.3333px;
+    float: left;
+    margin: 0 15px 0 0;
+}
+
+.product .itm:last-child {margin: 0;}
+
+.product .itm .img {
+    width: 100%;
+    float: left;
+    border: 1px solid #d8d8d8; box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 0 15px 0;
+}
+
+.product .itm02 .img {margin: 0;}
+
+.main_brand {
+    width: 100%;
+    overflow: hidden;
+    font-size: 0;
+    margin: 0 0 30px 0;
+}
+
+.main_brand .img {display: inline-block;}
+
+.main_brand .img:first-child {margin: 0 15px 0 0;}
+
+
+.menu {
+    width: 100%;
+    overflow: hidden;
+    font-size: 13px;
+}
+
+.menu::after, .menu::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #d8d8d8;
+}
+.menu::after {margin: 43px 0 30px 0;}
+
+.menu nav {
+    float: left;
+}
+
+.menu nav li {
+    float: left;
+    padding: 15px 10px;
+}
+
+.menu .icon {
+    float: right;
+    padding: 10px 10px;
+    font-size: 20px;
+    color: #797979;
+}
+
+address p {
+    float: left;
+    width: 700px;
+    font-style: normal;
+    color: #797979;
+}
+
+address .link {
+    float: right;
+}
+
+aside {
+    position: fixed;
+    top: 250px;
+    right: -150px;
+    transition: all 0.3s;
+}
+
+.wingBanner label {
+    display: none;
+    width: 20px;
+    height: 40px;
+    float: left;
+    background: #1d2d51;
+    cursor: pointer;
+}
+
+.wingBanner .openbtn::before, .wingBanner .closebtn::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-left: 3px solid rgb(255, 255, 255);
+    border-top: 3px solid rgb(255, 255, 255);
+    transform: rotate(-45deg);
+    margin: 12px 0 0 7px;
+}
+.wingBanner .closebtn::before {
+    margin: 12px 7px 0 0;
+    transform: rotate(-225deg);
+}
+
+.wingBanner .banner {
+    width: 150px;
+    height: 250px;
+    float: left;
+    background: #d8d8d8;
+}
+
+#btn:checked~aside .closebtn {display: block;}
+#btn:checked~aside .openbtn {display: none;}
+#btn~aside .openbtn {display: block;}
+
+#btn:checked~aside {right: 0;}
+
+.wingBanner .banner ul {height: 100%;}
+
+.wingBanner .banner li {
+    display: block;
+    width: 100%;
+    height: 22%;
+    text-align: center;
+    line-height: 55px;
+}
+
+.wingBanner .banner li a {color: #1d2d51}
+
+.wingBanner .banner li:last-child {
+    height: 12%;
+    background: #1d2d51;
+    line-height: 30px;
+}
+
+.wingBanner .banner li a {
+    display: block;
+}
+
+.wingBanner .banner li:last-child a {
+    color: #fff;
+}
