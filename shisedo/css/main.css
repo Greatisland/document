@@ -1,0 +1,247 @@
+* {margin: 0; padding: 0;}
+a {color: #fff; text-decoration: none;}
+ul,ol {list-style: none;}
+
+header {}
+
+.tab_banner {
+    background: #000;
+    overflow: hidden;
+}
+
+.tab_banner>div {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.tab_banner ul {
+    float: right;
+}
+
+.tab_banner li {
+    float: left;
+    font-size: 13px;
+    padding: 4px 0 4px 15px;
+}
+
+.logo {text-align: center;}
+
+.lnb {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.lnb ul {position: relative; float: left;}
+
+.lnb ul>li {
+    float: left;
+    margin: 6px 10px;
+}
+
+.lnb ul>li>a {font-size: 15px; font-weight: bold; color: #000;}
+
+.lnb ul:nth-child(2) {margin: 0 20px;}
+
+.lnb ul:nth-child(2)::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 20px;
+    background: #000;
+    position: absolute;
+    top: 8px; left: -10px;
+}
+.lnb ul:nth-child(2)::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 20px;
+    background: #000;
+    position: absolute;
+    top: 8px; right: -10px;
+}
+
+.search {
+    width: 150px;
+    height: 21px;
+    margin: 8px 10px;
+}
+
+/* ----------------------------------------header------------------------------------- */
+.visual_main {
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+
+.visual_main img {
+    display: block;
+    margin: 0 auto;
+}
+
+.rolling_banner {
+    width: 100%;
+}
+
+.rolling_banner img {
+    width: 100%;
+    max-width: 1320px;
+    display: block;
+    margin: 0 auto;
+}
+
+.event {
+    width: 1000px;
+    margin: 0 auto 60px auto;
+    overflow: hidden;
+}
+
+.event .main_line {
+    height: 60px;
+}
+
+.event h3 {
+    float: left;
+    width: 300px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.event .bar {float: left;}
+
+.event_wrap {
+    width: 920px;
+    margin: 0 auto;
+}
+
+.event .ev {
+    float: left;
+    width: 300px;
+}
+
+.event .ev~.ev {margin: 0 0 0 10px;}
+
+.event .ev p {font-weight: bold;}
+
+/* -----------------------------------------------event---------------------------------- */
+
+.bestseller {
+    width: 1000px;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+    padding-bottom: 30px; box-sizing: border-box;
+    border-bottom: 2px solid #999;
+}
+
+.bestseller .main_line {
+    height: 60px;
+}
+
+.bestseller h3 {
+    float: left;
+    width: 300px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.bestseller .bar {float: left;}
+
+.bestseller .itm {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 10px; box-sizing: border-box;
+}
+
+.bestseller .itm p {
+    font-size: 13px;
+    height: 63px; 
+}
+
+.bestseller .itm a {
+    padding: 3px 30px;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 13px;
+}
+
+.bestseller .itm a:hover {
+    color: #fff;
+    background: #000;
+}
+
+/* ---------------------------------------------------bestseller------------------------ */
+
+.content_wrap {
+    width: 1000px;
+    margin: 0 auto 40px auto;
+    overflow: hidden;
+}
+
+.content_wrap .content {
+    width: 320px;
+    float: left;
+}
+
+.content_wrap .content img {width: 100%;}
+
+.content_wrap .content_top {margin: 0 0 20px 0;}
+
+.content_wrap .content_top~.content_top {margin: 0 0 20px 20px;}
+
+.content_wrap .content_bottom~.content_bottom {margin: 0 0 0 20px;}
+
+/* -----------------------------------------------------footer------------------------------- */
+
+footer {
+    background: #000;
+}
+
+.footer_nav {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.footer_nav ul:first-child {float: left;}
+.footer_nav ul:last-child {float: right;}
+
+.footer_nav ul>li {
+    font-size: 15px;
+    padding: 8px 20px 8px 0;
+    float: left;
+    position: relative;
+}
+.footer_nav .ul_02 li {padding: 8px 0 8px 20px;}
+
+.footer_nav .ul_01 li~li::before, .footer_nav .ul_02 li~li::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 13px;
+    background: #fff;
+    position: absolute;
+    top: 12px;
+    left: -9px;
+}
+
+.footer_nav .ul_02 li~li::before {
+    left: 9px;
+}
+.footer_nav ul>li>a {display: block;}
+
+.footer_bottom {
+    height: 24px;
+    line-height: 24px;
+    background: #95242a;
+}
+
+.footer_bottom address {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    color: #fff;
+    font-size: 11px;
+}
+
+.footer_bottom address span:nth-child(1) {float: left;}
+.footer_bottom address span:nth-child(2) {float: right;}
