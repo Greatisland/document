@@ -1,0 +1,173 @@
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {margin: 0; padding: 0;}
+ul, ol {list-style: none;}
+
+.header {
+    background: #4da5ff;
+}
+
+.header .batt {
+    height: 15px;
+    background: #0a71da;
+}
+
+.header .header_center {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .header_center .btn_ham {
+    width: 20px; height: 3px;
+    background: #fff;
+    position: relative;
+    margin: 0 40px 0 20px;
+    top: 50%; left: 0; transform: translateY(-50%);
+}
+
+.btn_ham::after {
+    display: block;
+    content: "";
+    width: 20px; height: 3px;
+    background: #fff;
+    position: absolute;
+    top: -7px; left: 0;
+}
+.btn_ham::before {
+    display: block;
+    content: "";
+    width: 20px; height: 3px;
+    background: #fff;
+    position: absolute;
+    top: 7px; left: 0;
+}
+
+.header .header_center h2 {
+    line-height: 50px;
+    font-size: 23px;
+    color: #fff;
+}
+
+.header .header_center .icon {
+    width: 80px;
+    padding: 0 20px 0 0;
+    position: relative;
+}
+
+
+.header .header_center .icon i {
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 2px;
+}
+
+.header .header_center .icon::after {
+    display: block;
+    content: "3";
+    font-size: 11px;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    width: 20px; height: 20px;
+    background: #0a71da;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px; left: 23px;
+}
+
+.wrap {}
+
+.wrap .main_visual {width: 100%; position: relative;}
+.wrap .main_visual img {display: block; width: 100%; max-width: 100%;}
+.wrap .main_visual .back_txt {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(33,33,33,0.7);
+}
+.wrap .main_visual .back_txt p {
+    font-size: 17px;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    font-weight: normal;
+}
+
+#tab_01,#tab_02,#tab_03,#tab_04 {display: none;}
+
+.btn_tab {
+    display: flex;
+    height: 40px;
+}
+.btn_tab label {
+    flex: 1;
+    text-align: center;
+    line-height: 40px;
+    font-size: 13px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+#tab_01:checked~.btn_tab .btn_tab01 {border-bottom: 3px solid #0a71da}
+#tab_02:checked~.btn_tab .btn_tab02 {border-bottom: 3px solid #0a71da}
+#tab_03:checked~.btn_tab .btn_tab03 {border-bottom: 3px solid #0a71da}
+#tab_04:checked~.btn_tab .btn_tab04 {border-bottom: 3px solid #0a71da}
+
+.list {background: #b5b5b5; padding: 8px 0;}
+
+.list li {
+    width: 100%;
+    height: 80px;
+    margin: 0 0 8px 0;
+    background: #fff;
+    display: flex;
+}
+
+.list li p {
+    flex: 1;
+    line-height: 80px;
+    font-size: 19px;
+    color: #4da5ff;
+    margin: 0 0 0 40px;
+}
+
+.list li .img_box {
+    width: 140px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.list li .img_box img {
+    width: 100px; display: block;
+}
+
+.list li .img_box .arrow {
+    width: 25px; height: 25px; 
+    background: #4da5ff;
+    border-radius: 50%;
+    position: relative;
+}
+
+.list .arrow::before {
+    display: block;
+    content: "";
+    width: 11px; height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 12px; left: 4px;
+    transform: rotate(45deg);
+}
+.list .arrow::after {
+    display: block;
+    content: "";
+    width: 11px; height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 12px; left: 11px;
+    transform: rotate(-45deg);
+}
