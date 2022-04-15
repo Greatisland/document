@@ -68,14 +68,19 @@ h1.logo img {
 }
 
 @keyframes anim_header {
+    0% {top: 0;}
+    6% {top: 7px;}
+    12% {top: -7px;}
+    18% {top: 7px;}
+    24% {top: 0; left: 0;}
     100% {left: 210px;}
 }
 
 @keyframes anim_header_p {
-    2% {opacity: 1;}
-    3% {opacity: 0;}
-    70% {opacity: 0;}
-    71% {opacity: 1;}
+    24% {opacity: 1;}
+    36% {opacity: 0;}
+    99% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 .header_middle .anim_header img {
@@ -142,9 +147,17 @@ h1.logo img {
     height: 2px;
     background: #4d71d3;
 }
+
+/* Click 방식으로 메뉴 오픈 */
+
+/* 
 #hamBtn:checked~.fullmenu .hamberg {background: #fff;}
 #hamBtn:checked~.fullmenu .hamberg::after {top:0; width: 16px; transform: rotate(-45deg);}
 #hamBtn:checked~.fullmenu .hamberg::before {top:0; width: 16px; transform: rotate(-135deg);}
+#hamBtn {display: none;}
+#hamBtn~ul {display: none;}
+#hamBtn:checked~ul {display: block;}
+*/
 
 .lnb .map .fullmenu {
     position: relative;
@@ -160,9 +173,14 @@ h1.logo img {
     padding: 0 10px 0 30px;
     cursor: pointer;
 }
-#hamBtn {display: none;}
-#hamBtn~ul {display: none;}
-#hamBtn:checked~ul {display: block;}
+
+.map:hover .fulldown_menu {
+    display: block;
+}
+
+.map:hover .fullmenu .hamberg {background: #fff;}
+.map:hover .fullmenu .hamberg::after {top:0; width: 16px; transform: rotate(-45deg);}
+.map:hover .fullmenu .hamberg::before {top:0; width: 16px; transform: rotate(-135deg);}
 
 .lnb .map>li {position: relative;}
 .lnb .map>li>ul {
@@ -625,6 +643,8 @@ h1.logo img {
 
 /* -----------------------------------------detali------------------------------ */
 
+
+
 section.together {
     width: 100%;
     height: 300px;
@@ -637,6 +657,8 @@ section.together .container {
     margin: 0 auto;
     padding: 30px 0;
 }
+
+/*
 
 section.content_main {
     width: 1070px;
@@ -700,31 +722,74 @@ section.content_main .label::after {
     background: #fff;
 }
 
+*/
+
+.detail_page {
+    width: 1070px;
+    margin: 0 auto;
+}
+
+.detail_page .menu_btn {
+    overflow: hidden; position: relative;
+}
+
+.detail_page .menu_btn li {
+    float: left;
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 40px;
+    text-align: center;
+    background: #f2f2f2;
+    border-top: 1px solid #c4c4c4;
+    border-right: 1px solid #c4c4c4;
+    border-bottom: 3px solid #999; box-sizing: border-box;
+}
+
+.detail_page .menu_btn li a {display: block;}
+
+.detail_page .menu_btn01 li {border-left: 1px solid #c4c4c4;}
 
 
+.detail_page .menu_btn::after {
+    display: block;
+    content: "";
+    width: 270px; height: 3px;
+    background: #999;
+    position: absolute;
+    bottom: 0; right: 0;
+}
 
+.detail_page .menu_btn01 li:nth-child(1) {
+    border-top: 3px solid #999;
+    border-right: 3px solid #999;
+    border-left: 3px solid #999;
+    border-bottom: none;
+    background: #fff;
+}
+.detail_page .menu_btn02 li:nth-child(2) {
+    border-top: 3px solid #999;
+    border-right: 3px solid #999;
+    border-left: 3px solid #999;
+    border-bottom: none;
+    background: #fff;
+}
+.detail_page .menu_btn03 li:nth-child(3) {
+    border-top: 3px solid #999;
+    border-right: 3px solid #999;
+    border-left: 3px solid #999;
+    border-bottom: none;
+    background: #fff;
+}
+.detail_page .menu_btn04 li:nth-child(4) {
+    border-top: 3px solid #999;
+    border-right: 3px solid #999;
+    border-left: 3px solid #999;
+    border-bottom: none;
+    background: #fff;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ----------------------------------------------------detail_page------------------------------------- */
 
 
 .footer {
@@ -1013,9 +1078,9 @@ section.content_main .label::after {
 .wing_banner {
     position: fixed;
     width: 259px;
-    height: 100%;
+    height: 100vh;
     top: 0;
-    right: -200px;
+    right: -201px;
     transition: right 0.2s;
 }
 

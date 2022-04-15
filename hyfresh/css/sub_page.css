@@ -68,14 +68,19 @@ h1.logo img {
 }
 
 @keyframes anim_header {
+    0% {top: 0;}
+    6% {top: 7px;}
+    12% {top: -7px;}
+    18% {top: 7px;}
+    24% {top: 0; left: 0;}
     100% {left: 210px;}
 }
 
 @keyframes anim_header_p {
-    2% {opacity: 1;}
-    3% {opacity: 0;}
-    70% {opacity: 0;}
-    71% {opacity: 1;}
+    24% {opacity: 1;}
+    36% {opacity: 0;}
+    99% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 .header_middle .anim_header img {
@@ -142,9 +147,17 @@ h1.logo img {
     height: 2px;
     background: #4d71d3;
 }
+
+/* Click 방식으로 메뉴 오픈 */
+
+/* 
 #hamBtn:checked~.fullmenu .hamberg {background: #fff;}
 #hamBtn:checked~.fullmenu .hamberg::after {top:0; width: 16px; transform: rotate(-45deg);}
 #hamBtn:checked~.fullmenu .hamberg::before {top:0; width: 16px; transform: rotate(-135deg);}
+#hamBtn {display: none;}
+#hamBtn~ul {display: none;}
+#hamBtn:checked~ul {display: block;}
+*/
 
 .lnb .map .fullmenu {
     position: relative;
@@ -160,9 +173,14 @@ h1.logo img {
     padding: 0 10px 0 30px;
     cursor: pointer;
 }
-#hamBtn {display: none;}
-#hamBtn~ul {display: none;}
-#hamBtn:checked~ul {display: block;}
+
+.map:hover .fulldown_menu {
+    display: block;
+}
+
+.map:hover .fullmenu .hamberg {background: #fff;}
+.map:hover .fullmenu .hamberg::after {top:0; width: 16px; transform: rotate(-45deg);}
+.map:hover .fullmenu .hamberg::before {top:0; width: 16px; transform: rotate(-135deg);}
 
 .lnb .map>li {position: relative;}
 .lnb .map>li>ul {
@@ -351,6 +369,10 @@ h1.logo img {
     width: 343.333333px;
     height: 550px;
     border: 1px solid #f2f2f2; box-sizing: border-box;
+}
+
+.content_main .product:hover {
+    border: 1px solid #333;
 }
 
 .content_main .product .txt {
@@ -736,9 +758,9 @@ h1.logo img {
 .wing_banner {
     position: fixed;
     width: 259px;
-    height: 100%;
+    height: 100vh;
     top: 0;
-    right: -200px;
+    right: -201px;
     transition: right 0.2s;
 }
 
