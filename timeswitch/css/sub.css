@@ -47,7 +47,6 @@ a {text-decoration: none; color: #333; display: block;}
 .gnb_menu {display: none;}
 .gnb {display: block;}
 .label {
-    display: block;
     width: 60px;
     height: 40px;
 }
