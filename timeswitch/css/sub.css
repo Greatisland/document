@@ -218,38 +218,12 @@ a {text-decoration: none; color: #333; display: block;}
 
 /* ------------------------------footer----------------------- */
 
-@media all and (min-width: 301px) and (max-width: 800px) {
-    .header {width: 100%; border: none;}
-    .header .header_inner {
-        width: 100%; 
-        padding: 0 10px;
-        box-sizing: border-box;
-    }
-
-    .wrap {
-        width: 100%;
-        padding: 20px; box-sizing: border-box;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .aside {
-        width: 100%;
-        order: 2;
-    }
-
-    .main {
-        width: 100%;
-    }
-
-    .footer {width: 100%;}
-    .footer h4 {margin: 0 0 0 10px;}
-    .gnb {display: none;}
-    .gnb_menu {display: block;}
-}
 
 
-@media all and (min-width:801px) and (max-width: 959px) {
+
+
+
+@media all and (max-width: 1025px) {
     .header {width: 100%; border: none;}
     .header .header_inner {
         width: 100%;
@@ -257,7 +231,6 @@ a {text-decoration: none; color: #333; display: block;}
         box-sizing: border-box;
         padding: 0 10px;
     }
-
     .wrap {
         width: 100%;
         padding: 20px; box-sizing: border-box;
@@ -273,14 +246,38 @@ a {text-decoration: none; color: #333; display: block;}
     .main {
         width: 100%;
     }
-
     .footer {width: 100%;}
-    .footer h4 {margin: 0 0 0 10px;}
+    .footer h4 {width: 100%; margin: 0 0 0 10px;}
     .gnb {display: none;}
     .gnb_menu {display: block;}
 }
 
-@media all and (min-width:960px) {
-    .gnb {display: block;}
-    .gnb_menu {display: none;}
+@media all and (max-width: 601px) {
+    /* .header {width: 100%; border: none;} */
+    /* .header .header_inner {
+        width: 100%; 
+        padding: 0 10px;
+        box-sizing: border-box;
+    } */
+    /* .wrap {width: 100%;} */
+    .header .header_inner h1 a {font-size: 25px;}
+    .wrap {
+        width: 100%;
+        padding: 20px; box-sizing: border-box;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .aside {
+        width: 100%;
+        order: 2;
+    }
+
+    .main {
+        width: 100%;
+    }
+    /* .footer {width: 100%;}
+    .footer h4 {width: 100%; margin: 0 0 0 10px;}
+    .gnb {display: none;}
+    .gnb_menu {display: block;} */
 }

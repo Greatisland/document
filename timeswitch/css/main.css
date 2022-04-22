@@ -256,6 +256,8 @@ a {text-decoration: none; color: #333; display: block;}
         box-sizing: border-box;
     } */
     /* .wrap {width: 100%;} */
+    .header .header_inner h1 a {font-size: 25px;}
+    .main_visual p {font-size: 13px;}
     .layout01 {
         padding: 20px; 
         box-sizing: border-box; 
