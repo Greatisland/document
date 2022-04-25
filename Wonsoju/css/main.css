@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {font-family: 'Noto Sans KR', sans-serif; color: #333;}
+a {text-decoration: none; color: #333; display: block;}
+ul, ol {list-style: none;}
+img {max-width: 100%;}
+
+.header {
+    margin: 0 0 20px 0;
+}
+.header h1 {
+    padding: 10px;
+}
+
+    
+.lnb {background: #f2efe9;}
+
+.lnb ul {
+    display: flex;
+    padding: 0 10px;
+    gap: 10px;
+}
+
+.lnb ul li a {
+    font-size: 13px;
+    color: #666;
+    line-height: 38px;
+    letter-spacing: -0.04em;
+}
+
+/* ----------------------------------------header----------------------------------- */
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    gap: 30px;
+}
+
+.metaphor {
+    display: flex;
+    gap: 10px;
+    width: 70%;
+}
+
+.metaphor li a {
+    background: #535c4c;
+    color: #fff;
+    padding: 0 8px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+section {margin: 0 0 10px 0;}
+
+.main_sec h2 {
+    font-size: 21px;
+    line-height: 40px;
+    color: #333;
+    font-weight: 700;
+}
+
+.main_sec .date {
+    color: #777;
+    font-size: 15px;
+    line-height: 30px;
+    margin: 0 0 10px 0;
+}
+
+.main_sec .img {
+    width: 100%;
+}
+
+.main_sec p {
+    font-size: 15px;
+    color: #666;
+    letter-spacing: -0.04em;
+    margin: 0 0 30px 0;
+}
+
+.main_sec h3 {
+    border-left: 5px solid #55acee;
+    padding: 0 10px;
+    font-size: 21px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+/* -------------------------------------------------main_sec------------------------------ */
+
+.sns {
+    width: 100%;
+    display: flex;
+}
+
+.sns i {padding: 0 5px;}
+.sns span {display: none;}
+.sns div {
+    flex: 1;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+}
+
+.sns .twitter {background: #55acee;}
+.sns .facebook {background: #3b5998;}
+.sns .google {background: #dd4b39;}
+
+/* -------------------------------------------------sns------------------------------ */
+
+.article_01 {
+    background: #f2efe9;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 14px; box-sizing: border-box;
+    gap: 10px;
+}
+
+.article_01 h3 {
+    font-size: 21;
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.article_01 a {
+    width: calc(50% - 10px);
+}
+
+.article_01 a img {
+    width: 100%; display: block;
+    margin: 0 0 10px 0;
+}
+
+.article_01 a p {
+    color: #777;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+}
+
+/* -------------------------------------------------article_01------------------------------ */
+
+.aside {width: 100%;}
+.aside section {margin: 0 0 30px 0;}
+
+.article_02 h3, .article_03 h3, .article_04 h3 {
+    font-size: 21;
+    margin: 0 0 10px 0;
+}
+
+.article_02 ul li {
+    font-size: 15px;
+    line-height: 30px;
+    position: relative;
+    padding: 0 10px;
+
+}
+
+.article_02 ul li a {
+    color: #666;
+    letter-spacing: -0.025em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.article_02 ul li::before {
+    content: "";
+    display: block;
+    width: 4px; height: 4px;
+    background: #333;
+    position: absolute;
+    top: 50%; left: 0; 
+    transform: translateY(-50%);
+}
+
+/* -------------------------------------------------article_02------------------------------ */
+
+.article_03 a {
+    height: 200px;
+    position: relative;
+    margin: 0 0 10px 0;
+}
+
+.bg_article_01 {background: url(../img/article_img05.png) no-repeat center center/cover;}
+.bg_article_02 {background: url(../img/article_img06.png) no-repeat center center/cover;}
+
+.article_03 a p {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    padding: 0 10px; box-sizing: border-box;
+    color: #fff;
+    background: rgba(33, 33, 33, 0.7);
+    position: absolute;
+    bottom: 0; left: 0;
+    transition: all 0.2s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* -------------------------------------------------article_03------------------------------ */
+
+
+.article_04 a {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 10px 0;
+    gap: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.article_04 a:last-child {border: none;}
+
+.article_04 a img {
+    width: 60px; height: 60px;
+}
+
+.article_04 a .txt {flex: 1;}
+.article_04 a p {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 400;
+    color: #666;
+    letter-spacing: -0.025em;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.article_04 a span {
+    font-size: 13px;
+    color: #aaa;
+    display: block; margin: 0 0 5px 0;
+}
+
+/* -------------------------------------------------article_04------------------------------ */
+
+.footer {
+    height: 40px;
+    border-top: 1px solid #ccc;
+    padding: 20px 10px;
+    box-sizing: content-box;
+}
+
+.footer p {
+    color: #aaa;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+}
+
+/* -------------------------------------------------footer------------------------------ */
+
+@media all and (min-width: 768px) {
+    .lnb ul {gap: 40px;}
+    .lnb ul li a {
+        font-size: 15px;
+        line-height: 38px;
+        letter-spacing: 0em;
+    }
+
+    .main_sec h2 {
+        font-size: 25px;
+        letter-spacing: 0.01em;
+    }
+
+    .sns span {display: inline;}
+
+    .article_01 a {
+        width: calc(25% - 10px);
+    }
+
+    .aside {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 700px;
+        gap: 10px;
+    }
+
+    .article_03 a:hover p {
+        padding: 45px 10px;
+        height: 120px;
+        line-height: 24px;
+        overflow: visible;
+        text-overflow: clip;
+        white-space: normal;
+    }
+
+    .aside section {
+        width: calc(50% - 10px);
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .wrap {
+        width: 1024px;
+        margin: 0 auto 40px auto;
+    }
+
+    .main_wrap {
+        width: 70%;
+    }
+
+    .header h1, .lnb ul {
+        width: 1024px;
+        margin: 0 auto;
+    }
+
+    .main_sec {order: 0;}
+    .aside {
+        width: calc(30% - 50px);
+        flex-direction: row;
+        height: auto;
+    }
+
+    .aside section {width: 100%;}
+    .footer p {width: 1024px; margin: 0 auto;}
+}   
