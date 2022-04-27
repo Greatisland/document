@@ -1,0 +1,107 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 999;
+    background: #fff;
+    display: flex;
+    height: 80px;
+    padding: 25px 0 0 0; box-sizing: border-box;
+}
+
+.header h1 {width: 130px; margin: 0 auto 0 7px;}
+
+.header h1 img {display: block;}
+#searchbar {
+    width: 130px;
+    height: 30px;
+    border: 1px solid #707070; box-sizing: border-box;
+    border-radius: 20px;
+    padding: 0 10px;
+}
+#ham_btn {display: none;}
+
+.ham_btn {
+    width: 26px;
+    height: 30px;
+    border: 1px solid #707070; box-sizing: border-box;
+    margin: 0 7px 0 10px;
+    border-radius: 4px;
+    position: relative; 
+}
+
+.ham_btn .bar {
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background: #707070;
+    top: calc(50% - 6px); left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.7s;
+}
+.ham_btn .bar::after, .ham_btn .bar::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background: #707070;
+    top: 6px; left: 0;
+    transition: all 0.7s;
+}
+.ham_btn .bar::before {top: 12px;}
+
+#ham_btn:checked~.ham_btn .bar::after {top: 0; opacity: 0; transform: rotate(-45deg)}
+#ham_btn:checked~.ham_btn .bar {transform: translate(-50%, 6px) rotate(45deg);}
+#ham_btn:checked~.ham_btn .bar::before {top: 0; transform: rotate(-90deg);}
+#ham_btn:checked~.lnb {right: 0;}
+
+.lnb {
+    position: fixed;
+    top: 80px; right: -90vw;
+    width: 90vw;
+    height: calc(100vh - 80px);
+    overflow: auto;
+    transition: all 0.2s;
+    border-left: 1px solid #ccc;box-sizing: border-box;
+    background: #fff;
+    z-index: 999;
+}
+
+.lnb .login {
+    display: flex;
+}
+
+.login li {
+    flex: 1; height: 30px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;box-sizing: border-box;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.login li~li {border-left: 1px solid #ccc;}
+.lnb_sub {padding: 20px; box-sizing: border-box}
+.lnb_sub>li {margin: 0 0 20px 0;}
+.lnb_sub span {
+    display: inline-block;
+    font-size: 21px;
+    font-weight: 400;
+    padding: 4px 50px 4px 0;
+    border-bottom: 1px solid #ccc;
+    margin: 0 0 20px 0;
+}
+.lnb_sub ul.lnb_submenu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lnb_sub ul.lnb_submenu li {
+    width: 50%;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -0.06em;
+}

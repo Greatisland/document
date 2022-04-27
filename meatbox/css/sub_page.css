@@ -1,113 +1,12 @@
+@import url(../css/header.css);
+@import url(../css/footer.css);
+
 .header {
-    width: 100%;
-    position: fixed;
-    top: 0; left: 0;
-    z-index: 999;
-    background: #fff;
-    display: flex;
     flex-wrap: wrap;
     height: 110px;
-    padding: 25px 0 0 0; box-sizing: border-box;
-    justify-content: space-between;
 }
 
-.header h1 {width: 130px; margin: 0 0 0 7px}
-
-.header h1 img {display: block;}
-.header_right {display: flex; gap: 10px; position: relative;}
-#searchbar {
-    width: 130px;
-    height: 30px;
-    border: 1px solid #707070; box-sizing: border-box;
-    border-radius: 20px;
-    padding: 0 10px;
-}
-#ham_btn {display: none;}
-
-.ham_btn {
-    width: 26px;
-    height: 30px;
-    border: 1px solid #707070; box-sizing: border-box;
-    margin: 0 7px 0 0;
-    border-radius: 4px;
-    position: relative; 
-}
-
-.ham_btn .bar {
-    position: absolute;
-    width: 18px;
-    height: 2px;
-    background: #707070;
-    top: calc(50% - 6px); left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.7s;
-}
-.ham_btn .bar::after, .ham_btn .bar::before {
-    display: block;
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 2px;
-    background: #707070;
-    top: 6px; left: 0;
-    transition: all 0.7s;
-}
-.ham_btn .bar::before {top: 12px;}
-
-#ham_btn:checked~.ham_btn .bar::after {top: 0; opacity: 0; transform: rotate(-45deg)}
-#ham_btn:checked~.ham_btn .bar {transform: translate(-50%, 6px) rotate(45deg);}
-#ham_btn:checked~.ham_btn .bar::before {top: 0; transform: rotate(-90deg);}
-#ham_btn:checked~.lnb {right: 0;}
-
-.lnb {
-    position: fixed;
-    top: 111px; right: -90vw;
-    width: 90vw;
-    height: calc(100vh - 80px);
-    overflow: auto;
-    transition: all 0.2s;
-    border-left: 1px solid #ccc;box-sizing: border-box;
-    background: #fff;
-    z-index: 999;
-}
-
-.lnb .login {
-    display: flex;
-}
-
-.login li {
-    flex: 1; height: 30px;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;box-sizing: border-box;
-    text-align: center;
-    line-height: 30px;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.login li~li {border-left: 1px solid #ccc;}
-.lnb_sub {padding: 20px; box-sizing: border-box}
-.lnb_sub>li {margin: 0 0 20px 0;}
-.lnb_sub span {
-    display: inline-block;
-    font-size: 21px;
-    font-weight: 400;
-    padding: 4px 50px 4px 0;
-    border-bottom: 1px solid #ccc;
-    margin: 0 0 20px 0;
-}
-.lnb_sub ul.lnb_submenu {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.lnb_sub ul.lnb_submenu li {
-    width: 50%;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 40px;
-    letter-spacing: -0.06em;
-}
+.lnb {top: 111px;}
 
 .location_box {
     width: 100%;
@@ -155,6 +54,7 @@
 
 .wrap {
     margin: 110px 0 0 0;
+    min-height: calc(100vh - 80px);
     background: #f1f1f1;
     display: flex;
     flex-direction: column;
@@ -258,6 +158,9 @@
     font-weight: 400;
     color: #999;
     margin: 0 0 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .content_wrap a .txt .rank {
@@ -282,47 +185,3 @@
     letter-spacing: -0.04em;
 }
 
-/* ---------------------- */
-
-.footer {
-    width: 100%;
-    height: 60px;
-    background: #FB4747;
-}
-
-.footer ul {
-    display: flex;
-    padding: 4px 0;
-}
-
-.footer ul li {
-    flex: 1;
-}
-.footer ul li i {
-    display: block;
-    text-align: center;
-    font-size: 31px;
-    color: #fff;
-}
-.footer ul li i.xi-kakaotalk {
-    display: inline-block;
-    margin: 0 auto;
-    background: #fae100;
-    border-radius: 20%;
-    color: #3b1e1e;
-}
-
-.footer ul li .sns {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.footer ul li span {
-    font-size: 15px;
-    font-weight: 100;
-    display: block;
-    text-align: center;
-    color: #fff;
-}
