@@ -1,0 +1,24 @@
+.top_navi {
+    display: block;
+    position: fixed;
+    bottom: 120px; right: 30px;
+    background: #fff;
+    border: 1px solid #333;
+    width: 40px; height: 40px;
+}
+
+.top_navi::after,
+.top_navi::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px; height: 1px;
+    background: #333;
+    top: 50%; left: 17px;
+    transform: rotate(45deg);
+}
+
+.top_navi::after {
+    transform: rotate(135deg);
+    left: 3px;
+}

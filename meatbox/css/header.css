@@ -2,7 +2,7 @@
     width: 100%;
     position: fixed;
     top: 0; left: 0;
-    z-index: 999;
+    z-index: 998;
     background: #fff;
     display: flex;
     height: 80px;
@@ -51,7 +51,7 @@
 }
 .ham_btn .bar::before {top: 12px;}
 
-#ham_btn:checked~.ham_btn .bar::after {top: 0; opacity: 0; transform: rotate(-45deg)}
+#ham_btn:checked~.ham_btn .bar::after {top: 0; opacity: 0; transform: rotate(-45deg);}
 #ham_btn:checked~.ham_btn .bar {transform: translate(-50%, 6px) rotate(45deg);}
 #ham_btn:checked~.ham_btn .bar::before {top: 0; transform: rotate(-90deg);}
 #ham_btn:checked~.lnb {right: 0;}
@@ -73,12 +73,12 @@
 }
 
 .login li {
-    flex: 1; height: 30px;
+    flex: 1; height: 40px;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;box-sizing: border-box;
     text-align: center;
-    line-height: 30px;
-    font-size: 15px;
+    line-height: 40px;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -100,7 +100,7 @@
 
 .lnb_sub ul.lnb_submenu li {
     width: 50%;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 40px;
     letter-spacing: -0.06em;

@@ -1,5 +1,6 @@
 @import url(../css/header.css);
 @import url(../css/footer.css);
+@import url(../css/top_navi.css);
 
 .header {
     flex-wrap: wrap;
@@ -16,7 +17,7 @@
     display: block;
     width: 22px;
     height: 3px;
-    background: #999;
+    background: #ccc;
     position: absolute;
     top: calc(25% - 2px); left: calc(40% - 2px);
     transform: rotate(-45deg);
@@ -253,8 +254,8 @@
 }
 .notice, .review, .qna {display: none;}
 #detail_tab01:checked~.notice {display: block;}
-#detail_tab02:checked~.review {display: block;}
-#detail_tab03:checked~.qna {display: block;}
+#detail_tab02:checked~.review {display: flex;}
+#detail_tab03:checked~.qna {display: flex;}
 
 section.notice {
     padding: 20px 7px;
@@ -297,15 +298,204 @@ section.notice {
     color: #666;
 }
 
+.notice .img img {width: 100%;}
+
+/* ----------------------------------notice------------------------ */
+.review {
+    flex-direction: column;
+    gap: 40px;
+}
+
+.review .photo {
+    width: 100%;
+    height: 90px;
+    display: flex;
+}
+
+.review .photo li.on {flex: 1;}
+.review .photo li.on a {height: 100%;}
+
+.review .review_detail_01 .photo li:nth-child(1) a {background: url(../img/review01.jpg) center center/cover;}
+.review .review_detail_01 .photo li:nth-child(2) a {background: url(../img/review02.jpg) center center/cover;}
+.review .review_detail_01 .photo li:nth-child(3) a {background: url(../img/review03.jpg) center center/cover;}
+.review .review_detail_01 .photo li:nth-child(4) a {background: url(../img/review04.jpg) center center/cover;}
+.review .review_detail_01 .photo li:nth-child(5) a {background: url(../img/review04.jpg) center center/cover;}
+/* --review_detail_01-- */
+.review .review_detail_02 .photo li:nth-child(1) a {background: url(../img/review04.jpg) center center/cover;}
+.review .review_detail_02 .photo li:nth-child(2) a {background: url(../img/review03.jpg) center center/cover;}
+/* --review_detail_02-- */
+.review .photo .on_more a {
+    font-size: 48px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    line-height: 90px;
+}
+
+.review .photo .more span {
+    font-size: 53px;
+}
+
+.review .review_detail {
+    width: 100%;
+    padding: 10px; box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.review .review_detail~.review_detail {
+    border-top: 1px solid #ccc;
+}
+
+.review .review_detail h4 {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    color: #666;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.review .review_detail .port .icon {
+    width: 70px; height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.review .review_detail .port span {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.review .review_detail .txt {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 2;
+    font-size: 16px;
+    font-weight: 400;
+    color: #777;
+}
+
+.review .review_detail .txt .inner_txt {
+    display: flex;
+    align-items: flex-start;
+}
+
+.review .review_detail .txt .inner_txt strong {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-right: 20px;
+}
+.review .review_detail .txt .inner_txt img {
+    margin: 0 10px 0 0;
+}
+.review .review_detail .inner_txt span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FB4747;
+    line-height: 30px;
+    padding: 0 12.5px;
+    border-radius: 50%;
+    background: #f2f2f2;
+}
+
+.review .review_detail .star_bg {
+    width: 140px;
+    height: 38px;
+    background: url(../img/star.png) repeat-x;
+    margin: 10px 0 0 0;
+}
+
+.review .review_detail_01 .star_bg {width: 112px;}
+.review .review_detail_02 .star_bg {width: 28px;}
+
+/* ---------------------------------review-------------------------- */
+
+.qna {
+    padding: 10px 7px;
+    flex-wrap: wrap;
+}
+
+.submit_main {
+    width: 100%;
+}
+
+.submit_main .submit_inner {
+    width: 100%; height: 75px; 
+    border: 1px solid #ccc; box-sizing: border-box;
+    resize: none;
+    font-size: 16px;
+    color: #333;
+    padding: 8px;
+}
+
+.submit_main .submit_btn {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background: #f2f2f2;
+}
+
+.qna_count {
+    width: 100%;
+    font-size: 18px;
+    padding: 40px 0 10px 0;
+}
+
+.qna_con_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
 
 
+.qna_con .qna_inner {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
 
+.qna_con .question {
+    border-bottom: 1px solid #f2f2f2;
+}
 
+.qna_con .qna_inner .port {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+}
+.qna_con .qna_inner .arrow {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px 0 0 0; box-sizing: border-box;
+}
 
+.qna_con .qna_inner .port img {width: 100%;}
 
+.qna_con .qna_inner .txt {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    padding: 4px 0;
+}
 
+.qna_con .qna_inner .txt p {width: 100%;}
+.qna_con .qna_inner .txt p.id {font-size: 14px; color: #999;}
+.qna_con .qna_inner .txt p.comment {}
+.qna_con .qna_inner .txt p.date {color: #999;}
 
-
+/* ---------------------------------qna-------------------------- */
 
 .buy_btn {
     position: sticky;
@@ -332,4 +522,6 @@ section.notice {
     color: #fff;
     border-bottom: 1px solid #ccc; box-sizing: border-box;
 }
+
+/* -----------------------------------buy_btn------------------------ */
 

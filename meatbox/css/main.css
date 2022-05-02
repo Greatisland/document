@@ -1,5 +1,7 @@
 @import url(../css/header.css);
 @import url(../css/footer.css);
+@import url(../css/top_navi.css);
+
 
 .main_banner {
     width: calc(100% - 14px);
@@ -366,16 +368,21 @@
     gap: 10px;
 }
 
+.review .review_detail~.review_detail {
+    border-top: 1px solid #ccc;
+}
+
 .review .review_detail h4 {
     width: 100%;
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.025em;
     color: #666;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 
-.review .review_detail .port {}
 .review .review_detail .port .icon {
     width: 70px; height: 70px;
     border-radius: 50%;
@@ -383,35 +390,50 @@
 }
 .review .review_detail .port span {
     display: block;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 400;
     text-align: center;
 }
 
-.review .review_detail .txt {flex: 2;}
-.review .review_detail .txt strong {
-    font-size: 17px;
-    font-weight: 500;
-}
-.review .review_detail .txt p {
-    font-size: 15px;
+.review .review_detail .txt {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 2;
+    font-size: 16px;
     font-weight: 400;
+    color: #777;
 }
-.review .review_detail .recommand {flex: 1;}
-.review .review_detail .recommand span {
-    font-size: 15px;
+
+.review .review_detail .txt .inner_txt {
+    display: flex;
+    align-items: flex-start;
+}
+
+.review .review_detail .txt .inner_txt strong {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-right: 20px;
+}
+.review .review_detail .txt .inner_txt img {
+    margin: 0 10px 0 0;
+}
+.review .review_detail .inner_txt span {
+    font-size: 16px;
     font-weight: 600;
     color: #FB4747;
     line-height: 30px;
+    padding: 0 12.5px;
+    border-radius: 50%;
+    background: #f2f2f2;
 }
-.review .review_detail .star {
-    width: 100%;
-    height: 40px;
-}
+
 .review .review_detail .star_bg {
-    width: 185px;
+    width: 140px;
     height: 38px;
     background: url(../img/star.png) repeat-x;
+    margin: 10px 0 0 0;
 }
 
 /*---------------------------------------------review------------------------------------- */
