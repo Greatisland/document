@@ -67,6 +67,11 @@
         }
         .popup_login .login_box .login {
             margin: 0 20px 0 auto;
+            border: 1px solid #333;
+            padding: 2px 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            background: #ccc;
         }
 
         .close {
@@ -122,10 +127,11 @@
     </header>
     <div class="popup_login">
         <form class="login_box">
-            <p>로그인 팝업</p>
+            <p>로그인 팝업<br>
+            id=green, pw=12345</p>
             <input type="text" class="id" placeholder="아이디를 입력하세요">
             <input type="password" class="pw" placeholder="비밀번호를 입력하세요">
-            <input type="submit"  class="login" value="로그인">
+            <div class="login">로그인</div>
         </form>
         <div class="close">Close</div>
     </div>
