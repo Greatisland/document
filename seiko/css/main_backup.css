@@ -1,0 +1,493 @@
+* {margin: 0; padding: 0;}
+html, body {font-family: 'Noto Sans KR', sans-serif; color: #333; font-size: 15px; font-weight: 400;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #333;}
+img {max-width: 100%;}
+
+.eng {font-family: 'Montserrat', sans-serif;}
+
+.header { 
+    width: 100%;
+    position: fixed;
+    height: 100px;
+    top: 0; left: 0;
+    z-index: 99;
+    transition: all 0.5s
+}
+
+.header_bg {
+    background: #333;
+}
+
+.header .inner_header {
+    margin: 0 auto;
+    display: flex;
+    width: 1040px; height: 100%;
+}
+
+.logo {
+    order: 2;
+    margin: 0 auto;
+    align-self: center;
+}
+
+.gnb {
+    display: flex;
+    align-items: center;
+}
+
+.gnb_left {gap: 90px;}
+.gnb_right {gap: 45px; order: 3;}
+
+.gnb>li>a {
+    font-weight: 500;
+    color: #fff;
+}
+
+.header_icon {
+    order: 3;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0 0 0 30px;
+}
+
+.header_icon a {color: #fff;}
+
+.header .control_search {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+.header .control_search #searchbar {
+    width: 1040px;
+    margin: 0 auto;
+    height: 30px;
+    padding: 0 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+}
+
+.header .control_search .search_icon {
+    font-size: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; transform: translateY(-70%);
+    right: calc(50% - 480px);
+}
+
+.header .control_search .xi-close {
+    font-size: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; transform: translateY(-70%);
+    right: calc(50% - 520px);
+    cursor: pointer;
+}
+
+
+/* ------------------------------header--------------------------- */
+
+section.main_visual {
+    margin: 0 0 150px 0;
+}
+
+/* -----------------------------main_visual----------------------- */
+
+.collection {
+    width: 1040px;
+    margin: 0 auto 150px  auto;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.collection h2, .brands h2, .news h2, .world_of_seiko h2, .find_of_retailer h2 {
+    width: 100%;
+    font-size: 1.67rem;
+    font-weight: 500;
+    letter-spacing: 0.8rem;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.collection .col {
+    display: flex;
+    align-items: flex-start;
+    height: 640px;
+    margin: 0 0 100px 0;
+}
+
+.collection .col .img_side {
+    flex: 3;
+    position: relative;
+    height: 100%;
+}
+
+.collection .col .img_side>div {
+    position: absolute;
+    border: 1px solid #ddd;
+}
+
+.collection .img_side .img_big {
+    width: 512px;
+    border-radius: 40px 0 0 0;
+    overflow: hidden;
+    top: 0; left: 0;
+}
+.collection .img_side .img_middle {
+    width: 220px;
+    border-radius: 0 0 40px 0;
+    overflow: hidden;
+    top: 50%; right: 40px;
+}
+.collection .img_side .img_small {
+    width: 220px; height: 180px;
+    border-radius: 40px 0 0 0;
+    overflow: hidden;
+    bottom: 0; right: 38%; 
+}
+
+.collection .col .text_side {
+    flex: 2;
+    align-self: center;
+}
+
+/*------------- col02----------- */
+.collection .col02 .img_side .img_big {left: 50px;}
+.collection .col02 .img_side {order: 2;}
+.collection .col02 .text_side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.col02 .text_side .text01 {position: relative; margin: 0 0 50px 0;}
+.col02 .text_side .text01::after {
+    position: absolute;
+    top: 25px; right: 0;
+}
+/*------------- col02----------- */
+
+.col .text_side .text01 {
+    font-size: 1.5rem;
+    color: #aaa;
+}
+
+.col .text_side .text01::after {
+    content: "";
+    display: block;
+    width: 84px;
+    height: 1px;
+    background: #000;
+    margin: 25px 0;
+}
+.col .text_side .text02 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.08rem;
+    margin: 0 0 75px 0;
+}
+.col .text_side .text03 {
+    line-height: 40px;
+    letter-spacing: -0.025rem;
+    margin: 0 0 75px 0;
+}
+
+.col .text_side .detail_btn {
+    display: block;
+    width: 245px;
+    height: 54px;
+    background: #000;
+    text-align: center;
+    line-height: 54px;
+    color: #fff;
+    letter-spacing: 0.04rem;
+    position: relative;
+}
+
+.col .text_side .detail_btn::before,
+.col .text_side .detail_btn::after {
+    content: "";
+    display: block;
+    width: 0; height: 0;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #fff;
+    border-bottom: 15px solid transparent;
+    position: absolute;
+    top: 50%; left: 208px;
+    transform: translateY(-50%);
+}
+.col .text_side .detail_btn::after {
+    border-top: 15px solid transparent;
+    border-left: 9px solid #000;
+    border-bottom: 15px solid transparent;
+}
+/*--------------------- detail_btn------------------------ */
+
+.brands {
+    width: 100%;
+    margin: 0 0 150px 0;
+}
+
+.brands img {
+    display: block;
+    width: 100%;
+}
+
+.brands a {overflow: hidden;}
+
+.brands .link_wrap {
+    display: flex;
+}
+.brands .link_wrap .brand01 {flex: 1;}
+.brands .link_wrap .brand02 {width: 100%; height: 50%;}
+.brands .link_wrap .brand03 {width: 50%; height: 50%;}
+.brands .link_wrap .brand04 {width: 50%; height: 50%;}
+
+.brands .link_wrap02 {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+/* -----------------------brands------------------------------- */
+
+.news {
+    width: 1040px;
+    margin: 0 auto 150px auto;
+    background: #f6f6f6;
+    height: 500px;
+    display: flex;
+}
+
+.news .news_wrap {
+    margin: 0 0 0 56px;
+    display: flex;
+    align-self: center;
+    gap: 56px;
+}
+
+.news h2 {
+    text-align: left;
+    margin: 0;
+}
+
+.news .news_inner {
+    display: flex;
+    align-self: flex-start;
+    gap: 16px;
+    position: relative;
+}
+
+.news .news_inner .arrow_left, .arrow_right {
+    font-size: 0.6rem;
+    letter-spacing: 0.3rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ddd;
+    border-radius: 5px;
+    display: flex;
+    width: 120px;
+    cursor: pointer;
+}
+
+.news .news_inner .arrow_left {
+    left: -123px;
+    padding: 1px 0 1px 3px;
+}
+
+.news .news_inner .arrow_right {
+    right: -50px;
+    padding: 1px 3px 1px 0;
+}
+
+.news .news_inner .arrow_left::after, .arrow_right::before {
+    content: "";
+    display: block;
+    height: 1px;
+    flex: 1;
+    align-self: center;
+    background: #333;
+    margin: 0 0 0 8px;
+}
+
+.arrow_right::before {margin: 0 8px 0 0;}
+
+.news .news_inner .news_item {
+    width: 248px;
+    height: 358px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.news .news_inner .news_item .img {
+    width: 100%;
+    height: 248px;
+    overflow: hidden;
+}
+
+.news .news_inner .news_item .txt_box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 10px 0 10px;
+    flex: 1;
+}
+
+.news .news_inner .news_item .txt_box .date {
+    font-size: 0.9rem;
+    color: #707070;
+    letter-spacing: 0.1rem;
+}
+.news .news_inner .news_item .txt_box .attr {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin: 0 auto 0 20px;
+}
+.news .news_inner .news_item .txt_box p {
+    letter-spacing: -0.04rem;
+    margin: 8px 0 0 0;
+}
+.news .news_inner .news_item .txt_box .read_more {
+    align-self: flex-end;
+    margin: 0 0 0 auto;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.23rem;
+}
+.news .news_inner .news_item .txt_box .read_more::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: #000;
+}
+
+/* ----------------------------------news-------------------------------- */
+
+.world_of_seiko {
+    margin: 0 0 150px 0;
+}
+
+.world_of_seiko img {display: block; width: 100%;}
+
+.world_of_seiko .wos_wrap {
+    width: 100%;
+    display: flex;
+}
+
+.world_of_seiko .wos_wrap .wos_col01, .wos_col02 {
+    flex: 1;
+}
+
+/* ----------------------------world_of_seiko------------------------------ */
+
+.find_of_retailer {
+    width: 1040px;
+    margin: 0 auto 150px auto;
+    display: flex;
+}
+
+.find_of_retailer img {
+    max-width: none;
+}
+
+.find_of_retailer h2 {
+    text-align: left;
+    margin: 0 auto 60px auto;
+}
+
+.find_of_retailer .txt_side {
+    flex: 1.5;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 0 72px 0 0;
+}
+
+.find_of_retailer .txt_side p {
+    letter-spacing: 0.1rem;
+    line-height: 3rem;
+    margin: 0 0 40px 0;
+}
+
+.find_of_retailer .img_side {
+    flex: 1;
+    height: 600px;
+    overflow: hidden;
+    background: url(../img/retailer.jpg) no-repeat -60px center/cover;
+}
+
+.find_of_retailer .txt_side .detail_btn {
+    display: block;
+    width: 245px;
+    height: 54px;
+    background: #000;
+    text-align: center;
+    line-height: 54px;
+    color: #fff;
+    letter-spacing: 0.04rem;
+    position: relative;
+}
+
+.find_of_retailer .txt_side .detail_btn::before,
+.find_of_retailer .txt_side .detail_btn::after {
+    content: "";
+    display: block;
+    width: 0; height: 0;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #fff;
+    border-bottom: 15px solid transparent;
+    position: absolute;
+    top: 50%; left: 208px;
+    transform: translateY(-50%);
+}
+.find_of_retailer .txt_side .detail_btn::after {
+    border-top: 15px solid transparent;
+    border-left: 9px solid #000;
+    border-bottom: 15px solid transparent;
+}
+
+/* ------------------------------find_of_retailer--------------------------- */
+
+.footer .footer_inner {
+    background: #e2e2e2;
+    height: 80px;
+}
+
+.footer .footer_inner .footer_gnb {
+    width: 1040px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 34px;
+}
+
+.footer .footer_inner .footer_gnb li {
+    display: flex; 
+    align-items: center;
+}
+
+.footer .footer_inner .footer_gnb li a {
+    font-size: 0.75rem;
+}
+
+.footer .cop {
+    font-size: 0.75rem;
+    line-height: 50px;
+    text-align: center;
+}
+
+/* -----------------------------footer-------------------------------------------- */
