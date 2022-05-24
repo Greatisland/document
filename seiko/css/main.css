@@ -596,7 +596,7 @@ img {max-width: 100%;}
 .news .news_inner .news_item .txt_box p {
     width: 100%;
     letter-spacing: -0.04rem;
-    margin: 8px 0 70px 0;
+    margin: 8px 0 0 0;
     /* overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; */
