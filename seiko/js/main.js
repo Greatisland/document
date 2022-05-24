@@ -35,15 +35,15 @@ $(function(){
         let height03 = height02 + $('.collection .col').height()
         let height04 = height03 + $('.collection .col').height()
         
-        if (scr + 500 >= height04) {
-                $('.col03 .text_side').addClass('text_move')
+        if (scr + 300 >= height04) {
+                $('.col .text_side').addClass('text_move')
                 setTimeout(function () {
                     $('.col03 .img_middle').addClass('middle_move')
                 },300)
                 setTimeout(function () {
                     $('.col03 .img_small').addClass('small_move')
                 },600)
-        } else if (scr + 500 >= height03) {
+        } else if (scr + 400 >= height03) {
                 $('.col02 .text_side').addClass('text_move')
                 setTimeout(function () {
                 $('.col02 .img_middle').addClass('middle_move')
@@ -72,12 +72,23 @@ $(function(){
                 $('.news .news_item02').addClass('news_move')
             },200)
             setTimeout(function () {
-                $('.news .news_item03').addClass('news_move')
+                $('.news .news_item').addClass('news_move')
             },400)
         } else {
             $('.news .news_item').removeClass('news_move')
         }
+        // news 요소 스크롤 값에 따른 애니메이션
 
+        if(scr >= 5600){
+            $('.find_of_retailer .img_side').addClass('find_of_retailer_move')
+            setTimeout(function () {
+                $('.find_of_retailer .txt_side').addClass('find_of_retailer_move')
+            },400)
+        } else {
+            $('.find_of_retailer .txt_side').removeClass('find_of_retailer_move')
+            $('.find_of_retailer .img_side').removeClass('find_of_retailer_move')
+        }
+        // find_of_retailer 요소 스크롤 값에 따른 애니메이션
     })
 
 
@@ -145,11 +156,351 @@ $(function(){
     //동영상 완전종료
 
     $('.world_of_seiko a').on('mouseover mouseout',function(){
-        $('.world_of_seiko a').not(this).toggleClass('wos_move')
+        $('.world_of_seiko a').removeClass('wos_move')
+        $('.world_of_seiko a').not(this).addClass('wos_move')
     })
     //world_of_seiko hover 효과
 
+    function newsWebSlide(){
+        let eleWidth = $(".news .news_slider a~a").outerWidth(true)
+        let slide = $('.news_slider')
+        console.log(eleWidth)
+
+        function right(){
+            let all = slide.width()
+            let current = parseInt(slide.css('left'))
+            if(slide.is(':animated')){
+                return //중복 클릭으로 인한 애니메이션 버그 방지
+            }else if(current > eleWidth*-2 && all == 1352){//tablet ver
+                slide.stop().animate({left: current - eleWidth})
+            }else if(current > eleWidth*-3 && all == 1656){//web ver
+                slide.stop().animate({left: current - eleWidth})
+            }
+        }
+
+        function left(){
+            let all = slide.width()
+            let current = parseInt(slide.css('left'))
+            if(slide.is(':animated')){
+                return //중복 클릭으로 인한 애니메이션 버그 방지
+            }else if(current < 0 && all == 1352){//tablet ver
+                slide.stop().animate({left: current + eleWidth})
+            }else if(current < 0 && all == 1656){//web ver
+                slide.stop().animate({left: current + eleWidth})
+            }
+        }
+
+        $('.news .arrow_right').on('click',function(){right()})
+        $('.news .arrow_left').on('click',function(){left()})
+    }
+    //newsWebSlide()
+    newsWebSlide()
 
 
+    /////////////////////////// mobile ver code ////////////////////////////
 
+    let mobileWidth = window.matchMedia("all and (max-width: 767px)")
+    if (mobileWidth.matches) {
+
+        //////////////////////
+        colSlide()
+        brandSlide()
+        newsSlide()
+        wosSlide()
+        //////////////////////
+
+        function colSlide (){ 
+
+        let indi = $('.collection .indicator_box span') //indicator
+        let content = $('.collection .col_slide .col') //slide
+        let i = 0
+        let playOn = false
+        let rollAuto
+        content.hide()
+        indi.click(function(){
+            let index = indi.index(this) // let index = $(this).index()
+            if(indi.state){ //객체.속성
+                stop()
+                indiOff(indi.state)
+                indiOn(this)
+                $(content.state).stop().fadeOut(200)
+                $(content[index]).stop().delay(200).fadeIn(500)
+                i = index 
+                play()
+            } else {
+                indiOn(this)
+                $(content[index]).fadeIn(500)
+                play()
+            }
+            indi.state = this
+            content.state = content[index]
+            return false
+        }) //click_event
+
+        $('.collection .left_arrow').click(function(){
+            i--
+            if(i < 0){
+                i = indi.length - 1
+            }
+            indi[i].click()
+        })
+        $('.collection .right_arrow').click(function(){
+            i++
+            if(i > indi.length-1) {
+                i=0
+            }
+            indi[i].click()
+        })
+
+        function play(){
+            if(!playOn){
+                playOn = true
+                rollAuto = setInterval(function(){
+                    $('.collection .right_arrow').click()
+                }, 4000)
+            }
+        }
+
+        function stop(){
+            if(playOn){
+                playOn = false
+                clearInterval(rollAuto)
+            }
+        }
+
+        function indiOn(p){$(p).css('backgroundColor','#000')}
+        function indiOff(p){$(p).css('backgroundColor','#dedede')}
+
+        indi[0].click()
+        ////////////////////////////////////////////////////////////////////////////////
+        }//colSlide()
+
+
+        function brandSlide(){
+
+        let eleWidth = $(".brands .brands_slide a").innerWidth() //padding을 포함한 width
+        let playOn = false // bannerslider의 동작 상태를 관리하는 변수
+        let direction // 좌우 방향버튼 변수
+        let bannerAuto //setInterval함수 제어를 위한 변수
+        let indi = $('.brands .indicator_box span')// indicator
+        let slide = $('.brands_slide')
+
+        let list = $('.brands_slide').children()
+
+        
+        indi.click(function(){
+            $(this).css('backgroundColor','#000')
+            indi.not($(this)).css('backgroundColor','#dedede')
+            stop()
+            let current = parseInt(slide.css('left'))
+            let index = $(this).index()
+            if(slide.is(':animated')){
+                return
+            }else{
+            slide.stop().animate({left: eleWidth * (index) * -1})
+            }
+            play()
+        })
+
+        function indiFocus(){
+            let current = parseInt(slide.css('left'))
+            if(direction == 'right'){
+                switch (current){
+                    case 0 : 
+                        indi.not(indi.eq(1)).css('backgroundColor','#dedede')
+                        indi.eq(1).css('backgroundColor','#000')
+                    break
+                    case eleWidth * -1 : 
+                        indi.not(indi.eq(2)).css('backgroundColor','#dedede')
+                        indi.eq(2).css('backgroundColor','#000')
+                    break
+                    case eleWidth * -2  : 
+                        indi.not(indi.eq(3)).css('backgroundColor','#dedede')
+                        indi.eq(3).css('backgroundColor','#000')
+                    break
+                    case eleWidth * -3  : 
+                        indi.not(indi.eq(0)).css('backgroundColor','#dedede')
+                        indi.eq(0).css('backgroundColor','#000')
+                    break
+                }
+            }else if(direction == 'left'){
+                switch (current){
+                    case 0 : 
+                        indi.not(indi.eq(3)).css('backgroundColor','#dedede')
+                        indi.eq(3).css('backgroundColor','#000')
+                    break
+                    case eleWidth * -1 : 
+                        indi.not(indi.eq(0)).css('backgroundColor','#dedede')
+                        indi.eq(0).css('backgroundColor','#000')
+                    break
+                    case eleWidth * -2  : 
+                        indi.not(indi.eq(1)).css('backgroundColor','#dedede')
+                        indi.eq(1).css('backgroundColor','#000')
+                    break
+                    case eleWidth * -3  : 
+                        indi.not(indi.eq(2)).css('backgroundColor','#dedede')
+                        indi.eq(2).css('backgroundColor','#000')
+                    break
+                    case eleWidth * -4  : 
+                        indi.not(indi.eq(3)).css('backgroundColor','#dedede')
+                        indi.eq(3).css('backgroundColor','#000')
+                    break
+                }
+            }
+        }//현재 슬리이드에 따라 indicator의 색 변화
+
+        function play(){
+            if(!playOn){
+                playOn = true
+                bannerAuto = setInterval(function(){right()},4000)
+            }
+        }
+
+        function stop(){
+            if(playOn){
+                playOn = false
+                clearInterval(bannerAuto)
+            }
+        }
+
+        function right(){
+            stop()
+            direction = 'right'
+            let current = parseInt(slide.css('left'))
+            let end = eleWidth * -3
+
+            if(slide.is(':animated')){
+                return //중복 클릭으로 인한 애니메이션 버그 방지
+            }else if(current <= end){
+                slide.stop().animate({left: current - eleWidth},function(){
+                    slide.css('left','0')
+                })
+            }else{
+            slide.stop().animate({left: current - eleWidth})
+            }
+            indiFocus()
+            play()
+        }
+
+        function left(){
+            stop()
+            direction = 'left'
+            let current = parseInt(slide.css('left'))
+            let start = eleWidth * -4   
+
+            if(slide.is(':animated')){
+                return //중복 클릭으로 인한 애니메이션 버그 방지
+            }else if(current == 0){
+                slide.animate({'left': start},0,function(){
+                    slide.stop().animate({left: eleWidth * -3})
+                })
+            }else{
+            slide.stop().animate({left: current + eleWidth})
+            }
+            indiFocus()
+            play()
+        }
+
+        $('.brands .right_arrow').on('click',function(){right()})
+        $('.brands .left_arrow').on('click',function(){left()})
+        play()
+        }//brandSlide
+        /////////////////////////////////////////////////////////////////////////////
+
+
+        function newsSlide(){
+
+        let indi = $('.news .indicator_box span') //indicator
+        let content = $('.news .news_slider .news_item') //slide
+        let i = 0
+        let playOn = false
+        let rollAuto
+        content.hide()
+        indi.click(function(){
+            let index = indi.index(this) // let index = $(this).index()
+            if(indi.state){ //객체.속성
+                stop()
+                indiOff(indi.state)
+                indiOn(this)
+                $(content.state).stop().fadeOut(200)
+                $(content[index]).stop().delay(200).fadeIn(500)
+                i = index 
+                play()
+            } else {
+                indiOn(this)
+                $(content[index]).fadeIn(500)
+                play()
+            }
+            indi.state = this
+            content.state = content[index]
+            return false
+        }) //click_event
+
+        $('.news .left_arrow').click(function(){
+            i--
+            if(i < 0){
+                i = indi.length - 1
+            }
+            indi[i].click()
+        })
+        $('.news .right_arrow').click(function(){
+            i++
+            if(i > indi.length-1) {
+                i=0
+            }
+            indi[i].click()
+        })
+
+        function play(){
+            if(!playOn){
+                playOn = true
+                rollAuto = setInterval(function(){
+                    $('.news .right_arrow').click()
+                }, 4000)
+            }
+        }
+
+        function stop(){
+            if(playOn){
+                playOn = false
+                clearInterval(rollAuto)
+            }
+        }
+
+        function indiOn(p){$(p).css('backgroundColor','#000')}
+        function indiOff(p){$(p).css('backgroundColor','#dedede')}
+
+        indi[0].click()
+        }//newsSlide()
+        /////////////////////////////////////////////////////////////////////////////
+
+
+        function wosSlide(){
+        let eleWidth = $(".world_of_seiko .wos_wrap div").innerWidth() //padding을 포함한 width
+        let slide = $('.wos_wrap')
+        let direction = 'left'
+
+        function right(){
+            if(slide.is(':animated')){
+                return //중복 클릭으로 인한 애니메이션 버그 방지
+            }else if(direction == 'left'){
+                slide.stop().animate({'left': eleWidth * -1})
+            }
+            direction = 'right'
+        }
+
+        function left(){
+            if(slide.is(':animated')){
+                return //중복 클릭으로 인한 애니메이션 버그 방지
+            }else if(direction == 'right'){
+                slide.animate({'left': 0})
+            }
+            direction = 'left'
+        }
+
+        $('.world_of_seiko .right_arrow').on('click',function(){right()})
+        $('.world_of_seiko .left_arrow').on('click',function(){left()})
+        }//wosSlide()
+        //////////////////////////////////////////////////////////////////////////////
+    }//mobile ver code
 })
