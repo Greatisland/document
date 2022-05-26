@@ -6,6 +6,14 @@ img {max-width: 100%;}
 
 .eng {font-family: 'Montserrat', sans-serif;}
 
+body::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 90vh;
+}
+/* main_visual영역 차지하는 가상 공간 */
+
 .header { 
     width: 100%;
     position: fixed;
@@ -15,9 +23,7 @@ img {max-width: 100%;}
     transition: all 0.5s;
 }
 
-.header_bg {
-    background: #333!important;
-}
+.header_bg {background: #333!important;}
 
 .header .inner_header {
     margin: 0 20px;
@@ -71,7 +77,6 @@ img {max-width: 100%;}
 
 .gnb_ham .line_first {top: 18px;}
 .gnb_ham .line_last {top: 30px;}
-
 .ham_menu {
     position: absolute;
     top: 0; left: -100%;
@@ -84,14 +89,13 @@ img {max-width: 100%;}
     gap: 30px;
     transition: all 0.6s;
 }
+
 @keyframes ham_menu {
     0% {width: 100%}
     100% {width: 10%;}
 }
-.ham_menu li {
-    text-align: center;
-}
 
+.ham_menu li {text-align: center;}
 .ham_menu li::after {
     margin: 10px 0 0 0;
     content: "";
@@ -101,10 +105,7 @@ img {max-width: 100%;}
     background: #999;
 }
 
-.ham_menu li:hover::after {
-    animation: ham_menu 1s forwards;
-}
-
+.ham_menu li:hover::after {animation: ham_menu 1s forwards;}
 .ham_menu li a {
     color: #fff;
     height: 100%;
@@ -119,7 +120,6 @@ img {max-width: 100%;}
 }
 
 .header_icon a {color: #fff;}
-
 .header .control_search {
     position: fixed;
     top: 0; left: 0;
@@ -127,7 +127,6 @@ img {max-width: 100%;}
     height: 100px;
     background: #fff;
     display: none;
-    /* display: flex; */
     justify-content: center;
     align-items: center;
     z-index: 2;
@@ -171,30 +170,24 @@ img {max-width: 100%;}
     top: 13px; left: 0;
 }
 
-.header .control_search .search_close_btn::before {
-    transform: rotate(45deg);
-}
-.header .control_search .search_close_btn::after {
-    transform: rotate(-45deg);
-}
-
+.header .control_search .search_close_btn::before {transform: rotate(45deg);}
+.header .control_search .search_close_btn::after {transform: rotate(-45deg);}
 
 
 /* ------------------------------header--------------------------- */
 
+
 .main_visual {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     margin: 0 0 150px 0;
     overflow: hidden;
     position: fixed;
     top: 0; left: 0;
-    z-index: -1;
     background: url('../img/main_visual.jpg')no-repeat center center/cover!important;
 }
 
 .main_visual .video {width: 100%; height: 100%;}
-
 .main_visual .play_btn {
     position: absolute;
     bottom: 10%; right: 5%;
@@ -209,10 +202,7 @@ img {max-width: 100%;}
     100% {stroke-dashoffset: 0}
 }
 
-.main_visual .play_btn svg {
-    width: 100%; height: 100%;
-}
-
+.main_visual .play_btn svg {width: 100%; height: 100%;}
 .main_visual .play_btn svg circle {
     fill: transparent;
     stroke: #fff; stroke-width: 10px;
@@ -222,14 +212,8 @@ img {max-width: 100%;}
     transform-origin: center center;
 }
 
-.circle {
-    animation: circle 62s 1 linear forwards;
-}
-
-.circle_stop {
-    animation-play-state :  paused;
-}
-
+.circle {animation: circle 62s 1 linear forwards;}
+.circle_stop {animation-play-state :  paused;}
 .main_visual .play_btn img {
     position: absolute;
     top: 50%; left: 50%;
@@ -237,18 +221,27 @@ img {max-width: 100%;}
     display: block;
 }
 
-.main_visual .play_btn .circle_play {
-    display: none;
-}
+.main_visual .play_btn .circle_play {display: none;}
+
 
 /* -----------------------------main_visual----------------------- */
 
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+}
+
 .collection {
     width: 100%;
-    margin: 100vh auto 150px  auto;
+    margin: 0 auto 150px  auto;
     padding: 30px 0;
     overflow: hidden;
     position: relative;
+    background: #fff;
 }
 
 .collection h2, .brands h2, .news h2, .world_of_seiko h2, .find_of_retailer h2 {
@@ -260,10 +253,7 @@ img {max-width: 100%;}
     margin: 0 0 50px 0;
 }
 
-.collection h2 {
-    padding: 100px 0 0 0;
-}
-
+.collection h2 {padding: 100px 0 0 0;}
 .collection .col_wrap {
     width: 80%;
     margin: 0 auto;
@@ -271,31 +261,22 @@ img {max-width: 100%;}
     overflow: hidden;
 }
 
-.collection .col_slide {
-    width: 100%;
-    display: flex;
-}
-
-.collection .col02, .collection .col03 {
-    display: none;
-}
-
+.collection .col {margin: 0 0 100px 0;}
+.collection .col:last-child {margin: 0;}
 .collection .col .img_side {
     position: relative;
     display: block;
     margin: 0 0 50px 0;
 }
 
-.collection .col .img_side>div {
-    border: 1px solid #ddd;
-}
-
+.collection .col .img_side>div {border: 1px solid #ddd;}
 .collection .img_side .img_big {
     position: static;
     width: 84%;
     border-radius: 40px 0 0 0;
     overflow: hidden;
 }
+
 .collection .img_side .img_middle {
     position: absolute;
     width: 36%;
@@ -303,6 +284,7 @@ img {max-width: 100%;}
     overflow: hidden;
     top: 35%; right: 0;
 }
+
 .collection .img_side .img_small {
     position: absolute;
     width: 22%; height: 20%;
@@ -348,22 +330,15 @@ img {max-width: 100%;}
     display: block;
     width: 245px;
     height: 54px;
-    background: #fff;
+    background: #000;
     text-align: center;
     line-height: 54px;
-    color: #333;
+    color: #fff;
     letter-spacing: 0.04rem;
     position: absolute;
     top: -77px; left: 50%;
     transform: translateX(-50%);
     transition: all 0.6s;
-    border: 1px solid #000;box-sizing: border-box;
-}
-
-.col .text_side .detail_btn:hover {
-    color: #fff;    
-    background: #000;
-    border: 1px solid #000;
 }
 
 .col .text_side .detail_btn::before,
@@ -372,85 +347,29 @@ img {max-width: 100%;}
     display: block;
     width: 0; height: 0;
     border-top: 15px solid transparent;
-    border-left: 15px solid #000;
+    border-left: 15px solid #fff;
     border-bottom: 15px solid transparent;
     position: absolute;
     top: 50%; left: 208px;
     transform: translateY(-50%);
     transition: all 0.6s;
 }
+
 .col .text_side .detail_btn::after {
+    left: 207px;
     border-top: 15px solid transparent;
-    border-left: 9px solid #fff;
+    border-left: 9px solid #000;
     border-bottom: 15px solid transparent;
 }
 
-.col .text_side .detail_btn:hover::before {border-left: 15px solid #fff;}
-.col .text_side .detail_btn:hover::after {border-left: 9px solid #000;}
 
-.collection .indicator_box {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.collection .indicator_box span {
-    width: 20%;
-    height: 7px;
-    background: #dedede;
-}
-
-.collection .indicator_box .btn01 {
-    background: #000;
-}
-
-.collection .col_arrow {
-    width: 40px; height: 40px;
-    position: absolute;
-    top: 50%;
-    background: #000;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.collection .left_arrow {
-    left: calc(10% - 20px);
-}
-.collection .right_arrow {
-    right: calc(10% - 20px);
-}
-
-.collection .col_arrow::before,
-.collection .col_arrow::after {
-    content: "";
-    display: block;
-    width: 17px;
-    height: 3px;
-    background: #fff;
-    position: absolute;
-    left: 50%;
-}
-.collection .left_arrow::before {
-    top: 63%;
-    transform: translate(-50%,-50%) rotate(45deg);
-}
-.collection .left_arrow::after {
-    top: 38%;
-    transform: translate(-50%,-50%) rotate(-45deg);
-}
-.collection .right_arrow::before {
-    top: 63%;
-    transform: translate(-50%,-50%) rotate(135deg);
-}
-.collection .right_arrow::after {
-    top: 38%;
-    transform: translate(-50%,-50%) rotate(-135deg);
-}
 /*--------------------- detail_btn------------------------ */
+
 
 .brands {
     width: 100%;
     margin: 0 0 100px 0;
+    background: #fff;
 }
 
 .brands img {
@@ -472,9 +391,7 @@ img {max-width: 100%;}
     top: 0; left: 0;
 }
 
-.brands .brands_slide a {
-    flex: 1;
-}
+.brands .brands_slide a {flex: 1;}
 
 /* slide_arrow */
 .brands .col_arrow {
@@ -486,13 +403,8 @@ img {max-width: 100%;}
     cursor: pointer;
 }
 
-.brands .left_arrow {
-    left: calc(10% - 20px);
-}
-.brands .right_arrow {
-    right: calc(10% - 20px);
-}
-
+.brands .left_arrow {left: calc(10% - 20px);}
+.brands .right_arrow {right: calc(10% - 20px);}
 .brands .col_arrow::before,
 .brands .col_arrow::after {
     content: "";
@@ -533,25 +445,22 @@ img {max-width: 100%;}
     background: #dedede;
 }
 
-.brands .indicator_box .btn01 {
-    background: #000;
-}
+.brands .indicator_box .btn01 {background: #000;}
 
 
 /* -----------------------brands------------------------------- */
 
+
 .news {
     width: 100%;
     margin: 0 auto 150px auto;
-    background: #f6f6f6;
+    background: #fff;
     padding: 30px 0 80px 0;
     position: relative;
+    order: 2;
 }
 
-.news img {
-    width: 100%;
-}
-
+.news img {width: 100%;}
 .news .news_wrap {
     width: 80%;
     margin: 0 auto;
@@ -565,10 +474,7 @@ img {max-width: 100%;}
     position: relative;
 }
 
-.news .news_inner .news_item {
-    width: 100%;
-}
-
+.news .news_inner .news_item {width: 100%;}
 .news .news_inner .news_item .img {
     width: 100%;
     overflow: hidden;
@@ -588,19 +494,19 @@ img {max-width: 100%;}
     color: #707070;
     letter-spacing: 0.1rem;
 }
+
 .news .news_inner .news_item .txt_box .attr {
     font-size: 0.9rem;
     color: #aaa;
     margin: 0 auto 0 20px;
 }
+
 .news .news_inner .news_item .txt_box p {
     width: 100%;
     letter-spacing: -0.04rem;
     margin: 8px 0 0 0;
-    /* overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; */
 }
+
 .news .news_inner .news_item .txt_box .read_more {
     align-self: flex-end;
     margin: 0 0 0 auto;
@@ -609,6 +515,7 @@ img {max-width: 100%;}
     letter-spacing: 0.23rem;
     text-align: right;
 }
+
 .news .news_inner .news_item .txt_box .read_more::after {
     display: block;
     content: "";
@@ -618,9 +525,6 @@ img {max-width: 100%;}
 }
 
 .news .arrow_left, .news .arrow_right {display: none;}
-
-/* slide_arrow */
-
 .news .col_arrow {
     width: 40px; height: 40px;
     position: absolute;
@@ -630,13 +534,8 @@ img {max-width: 100%;}
     cursor: pointer;
 }
 
-.news .left_arrow {
-    left: calc(10% - 20px);
-}
-.news .right_arrow {
-    right: calc(10% - 20px);
-}
-
+.news .left_arrow {left: calc(10% - 20px);}
+.news .right_arrow {right: calc(10% - 20px);}
 .news .col_arrow::before,
 .news .col_arrow::after {
     content: "";
@@ -647,18 +546,22 @@ img {max-width: 100%;}
     position: absolute;
     left: 50%;
 }
+
 .news .left_arrow::before {
     top: 63%;
     transform: translate(-50%,-50%) rotate(45deg);
 }
+
 .news .left_arrow::after {
     top: 38%;
     transform: translate(-50%,-50%) rotate(-45deg);
 }
+
 .news .right_arrow::before {
     top: 63%;
     transform: translate(-50%,-50%) rotate(135deg);
 }
+
 .news .right_arrow::after {
     top: 38%;
     transform: translate(-50%,-50%) rotate(-135deg);
@@ -677,11 +580,11 @@ img {max-width: 100%;}
     background: #dedede;
 }
 
-.news .indicator_box .btn01 {
-    background: #000;
-}
+.news .indicator_box .btn01 {background: #000;}
+
 
 /* ----------------------------------news-------------------------------- */
+
 
 .world_of_seiko {
     width: 100%;
@@ -691,62 +594,92 @@ img {max-width: 100%;}
 }
 
 .world_of_seiko img {display: block; width: 100%;}
-
-.world_of_seiko .wos_wrap {
-    width: 200%;
+.world_of_seiko .wos_wrap .wos {
     display: flex;
+    width: 200%;
     position: relative;
     top: 0; left: 0;
 }
 
-.world_of_seiko .wos_wrap .wos_col01, .wos_col02 {
+.world_of_seiko .wos_wrap .wos a {
+    position: relative; 
     flex: 1;
 }
 
-.world_of_seiko .col_arrow {
-    width: 40px; height: 40px;
+@keyframes wos_arrow_left {
+    0% {left: 30px}
+    100% {left: -30px}
+}
+
+@keyframes wos_arrow_right {
+    0% {left: -30px}
+    100% {left: 30px}
+}
+
+
+.world_of_seiko .wos_direc_left {
     position: absolute;
-    top: calc(50% + 20px);
-    background: #fff;
-    border-radius: 50%;
-    cursor: pointer;
+    bottom: 10%; right: 10%;
+}
+.world_of_seiko .wos_direc_right {
+    position: absolute;
+    bottom: 10%; left: 10%;
 }
 
-.world_of_seiko .left_arrow {
-    left: calc(10% - 20px);
-}
-.world_of_seiko .right_arrow {
-    right: calc(10% - 20px);
+.world_of_seiko .wos_direc span {
+    color: #fff;
+    font-weight: 600;
 }
 
-.world_of_seiko .col_arrow::before,
-.world_of_seiko .col_arrow::after {
+.world_of_seiko .wos_direc .arrow {
+    position: relative;
+    width: 30px;
+    height: 40px;
+    top: 0; left: 0;
+    animation: wos_arrow_left 1s infinite;
+}
+
+.world_of_seiko .wos_direc_right .arrow {
+    animation: wos_arrow_right 1s infinite;
+}
+
+.world_of_seiko .wos_direc_left .arrow::before,
+.world_of_seiko .wos_direc_left .arrow::after {
     content: "";
     display: block;
-    width: 17px;
+    width: 20px;
     height: 3px;
-    background: #000;
+    background: #fff;
     position: absolute;
-    left: 50%;
+    top: 28%; left: 50%;
+    transform: rotate(-50deg);
 }
-.world_of_seiko .left_arrow::before {
-    top: 63%;
-    transform: translate(-50%,-50%) rotate(45deg);
-}
-.world_of_seiko .left_arrow::after {
-    top: 38%;
-    transform: translate(-50%,-50%) rotate(-45deg);
-}
-.world_of_seiko .right_arrow::before {
-    top: 63%;
-    transform: translate(-50%,-50%) rotate(135deg);
-}
-.world_of_seiko .right_arrow::after {
-    top: 38%;
-    transform: translate(-50%,-50%) rotate(-135deg);
+.world_of_seiko .wos_direc_left .arrow::after {
+    top: 62%; 
+    transform: rotate(50deg);
 }
 
+.world_of_seiko .wos_direc_right .arrow::before,
+.world_of_seiko .wos_direc_right .arrow::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    top: 28%; left: 50%;
+    transform: rotate(50deg);
+}
+.world_of_seiko .wos_direc_right .arrow::after {
+    top: 62%; 
+    transform: rotate(-50deg);
+}
+
+
+
+
 /* ----------------------------world_of_seiko------------------------------ */
+
 
 .find_of_retailer {
     width: 80%;
@@ -754,12 +687,11 @@ img {max-width: 100%;}
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
+    background: #fff;
+    order: 3;
 }
 
-.find_of_retailer img {
-    max-width: none;
-}
-
+.find_of_retailer img {max-width: none;}
 .find_of_retailer h2 {
     text-align: left;
     margin: 0 auto 60px auto;
@@ -790,20 +722,14 @@ img {max-width: 100%;}
     display: block;
     width: 245px;
     height: 54px;
-    background: #fff;
+    background: #000;
     text-align: center;
     line-height: 54px;
-    color: #333;
+    color: #fff;
     letter-spacing: 0.04rem;
     position: relative;
     transition: all 0.6s;
-    border: 1px solid #000; box-sizing: border-box;
-}
-
-.find_of_retailer .txt_side .detail_btn:hover {
-    color: #fff;    
-    background: #000;
-    border: 1px solid #000;
+    border: 1px solid #fff; box-sizing: border-box;
 }
 
 .find_of_retailer .txt_side .detail_btn::before,
@@ -812,23 +738,26 @@ img {max-width: 100%;}
     display: block;
     width: 0; height: 0;
     border-top: 15px solid transparent;
-    border-left: 15px solid #000;
+    border-left: 15px solid #fff;
     border-bottom: 15px solid transparent;
     position: absolute;
     top: 50%; left: 208px;
     transform: translateY(-50%);
     transition: all 0.6s;
 }
+
 .find_of_retailer .txt_side .detail_btn::after {
     border-top: 15px solid transparent;
-    border-left: 9px solid #fff;
+    border-left: 9px solid #000;
     border-bottom: 15px solid transparent;
 }
 
-.find_of_retailer .txt_side .detail_btn:hover::before {border-left: 15px solid #fff;}
-.find_of_retailer .txt_side .detail_btn:hover::after {border-left: 9px solid #000;}
 
 /* ------------------------------find_of_retailer--------------------------- */
+.footer {
+    width: 100%;
+    order: 4;
+}
 
 .footer .footer_inner {
     background: #e2e2e2;
@@ -869,6 +798,7 @@ img {max-width: 100%;}
     background: #333;
     border: 3px solid #333; box-sizing: border-box;
     overflow: hidden;
+    z-index: 10;
 }
 
 @keyframes btn_anim {
@@ -876,11 +806,7 @@ img {max-width: 100%;}
     100% {transform: rotate(270deg) translateX(60%);}
 }
 
-.top_btn:hover img {
-    animation: btn_anim 1s infinite;
-}
-
-
+.top_btn:hover img {animation: btn_anim 1s infinite;}
 .top_btn::after {
     content: "";
     display: block;
@@ -892,15 +818,19 @@ img {max-width: 100%;}
     margin: 0 0 0 -10px;
 }
 
-.top_btn img {
-    transform: rotate(270deg) translateX(10%);
-}
+.top_btn img {transform: rotate(270deg) translateX(10%);}
+
 
 /* ------------------------------footer----------------------------------- */
+
 
 /* //////////////////////////////////////////////////////////////////////////////// */
 
 @media all and (min-width: 768px){
+    .wrap {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
     .collection {
         display: flex;
@@ -908,7 +838,7 @@ img {max-width: 100%;}
         padding: 0 10px; box-sizing: border-box;
     }
     
-    .collection .col_wrap,.collection .col_slide {
+    .collection .col_wrap,.collection {
         width: 100%;
         display: block;
     }
@@ -933,11 +863,13 @@ img {max-width: 100%;}
         opacity: 0;
         transition: all 0.5s;
     }
+
     .collection .img_side .img_small {
         bottom: 15%; right: 38%; 
         opacity: 0;
         transition: all 0.5s;
     }
+
     .collection .col .text_side {
         display: block;
         margin: auto;
@@ -951,8 +883,6 @@ img {max-width: 100%;}
     .middle_move {top: 50%!important;opacity: 1!important;}
     .small_move {bottom: 20%!important; opacity: 1!important;}
     .text_move {margin: 0!important; opacity: 1!important;}
-    
-
     .col .text_side .text01::after {
         content: "";
         display: block;
@@ -961,10 +891,10 @@ img {max-width: 100%;}
         background: #000;
         margin: 25px 0;
     }
+
     .col .text_side .text01 {font-size: 1.5rem;}
     .col .text_side .text02 {margin: 0 0 75px 0; font-size: 1.5rem;}
     .col .text_side .text03 {display: block;}
-    
     .col .text_side .detail_btn {
         position: relative;
         top: 0; left: 0;
@@ -981,6 +911,7 @@ img {max-width: 100%;}
         flex-direction: column;
         align-items: flex-end;
     }
+
     .col02 .text_side .text01 {position: relative; margin: 0 0 50px 0; overflow: inherit;}
     .col02 .text_side .text01::after {
         position: absolute;
@@ -988,9 +919,41 @@ img {max-width: 100%;}
     }
     /*------------- col02----------- */
     
-    
     .collection .indicator_box {display: none;}
     .collection .col_arrow {display: none;}
+    .col .text_side .detail_btn {
+        background: #fff;
+        color: #333;
+        border: 1px solid #000;box-sizing: border-box;
+    }
+    
+    .col .text_side .detail_btn:hover {
+        color: #fff;    
+        background: #000;
+        border: 1px solid #000;
+    }
+    
+    .col .text_side .detail_btn::before,
+    .col .text_side .detail_btn::after {
+        content: "";
+        display: block;
+        width: 0; height: 0;
+        border-top: 15px solid transparent;
+        border-left: 15px solid #000;
+        border-bottom: 15px solid transparent;
+        position: absolute;
+        top: 50%; left: 208px;
+        transform: translateY(-50%);
+        transition: all 0.6s;
+    }
+
+    .col .text_side .detail_btn::after {
+        left: 207px;
+        border-left: 9px solid #fff;
+    }
+    
+    .col .text_side .detail_btn:hover::before {border-left: 15px solid #fff;}
+    .col .text_side .detail_btn:hover::after {border-left: 9px solid #000;}
     .brands {margin: 0 0 150px 0;}
     .brands .brands_wrap {display: none;}
     .brands .link_wrap {display: flex; flex-wrap: wrap;}
@@ -1000,10 +963,7 @@ img {max-width: 100%;}
         transition: all 0.6s;
     }
     
-    .brands a {
-        overflow: hidden;
-    }
-
+    .brands a {overflow: hidden;    }
     .brands a:hover img {
         transform: scale3d(1.05,1.05,1);
         filter: sepia(70%);
@@ -1013,7 +973,6 @@ img {max-width: 100%;}
     .brands .link_wrap .brand02 {width: 100%; height: 50%;}
     .brands .link_wrap .brand03 {width: 50%; height: 50%;}
     .brands .link_wrap .brand04 {width: 50%; height: 50%;}
-
     .brands .link_wrap02 {
         display: flex;
         flex-wrap: wrap;
@@ -1024,6 +983,8 @@ img {max-width: 100%;}
         width: 100%;
         height: 500px;
         padding: 50px 0 0 0;
+        order: 1;
+        background: #f6f6f6;
     }
 
     .news .news_wrap {
@@ -1041,7 +1002,6 @@ img {max-width: 100%;}
     }
     
     .news .news_slider {width: 1656px; gap: 0;}
-
     .news .arrow_left, .arrow_right {
         font-size: 0.6rem;
         letter-spacing: 0.3rem;
@@ -1056,10 +1016,7 @@ img {max-width: 100%;}
         color: #000;
     }
 
-    .news .arrow_left:hover, .arrow_right:hover {
-        background: #f6f6f6;
-    }
-    
+    .news .arrow_left:hover, .arrow_right:hover {background: #f6f6f6;    }
     .news .arrow_left {
         left: 80px;
         padding: 1px 0 1px 3px;
@@ -1081,7 +1038,6 @@ img {max-width: 100%;}
     }
     
     .arrow_right::before {margin: 0 8px 0 0;}
-    
     .news .news_inner .news_item {
         width: 248px;
         height: 380px;
@@ -1095,14 +1051,9 @@ img {max-width: 100%;}
         width: 42%;
         transition: all 0.6s;
     }
-    .news .news_inner .news_item:hover .read_more {
-        width: 100%;
-    }
 
-    .news .news_inner .news_item~.news_item {
-        margin: 0 0 0 104px;
-    }
-    
+    .news .news_inner .news_item:hover .read_more {width: 100%;}
+    .news .news_inner .news_item~.news_item {margin: 0 0 0 104px;}
     .news .news_inner .news_item .img {height: 248px;}
     .news .news_inner .news_item .txt_box p {
         letter-spacing: -0.04rem;
@@ -1110,16 +1061,15 @@ img {max-width: 100%;}
     }
 
     .news_move {padding: 0!important; opacity: 1!important;}
-
-    
     .news .col_arrow, .news .indicator_box {display: none;}
-    .world_of_seiko .wos_wrap {width: 100%;}
-    .world_of_seiko .col_arrow {display: none;}
-
+    .world_of_seiko {order: 2;}
+    .world_of_seiko .wos_wrap .wos {
+        width: 100%;
+        position: static;
+    }
     .world_of_seiko a {transition: all 0.5s;}
-        
+    .wos_direc {display: none;}
     .wos_move {opacity: 0.5!important;}
-
     
     .find_of_retailer {
         flex-wrap: nowrap;
@@ -1151,6 +1101,24 @@ img {max-width: 100%;}
         margin: 0!important;
         opacity: 1!important;
     }
+
+    .find_of_retailer .txt_side .detail_btn {
+        background: #fff;
+        color: #333;
+        border: 1px solid #000; box-sizing: border-box;
+    }
+    
+    .find_of_retailer .txt_side .detail_btn:hover {
+        color: #fff;    
+        background: #000;
+        border: 1px solid #000;
+    }
+    
+    .find_of_retailer .txt_side .detail_btn::before,
+    .find_of_retailer .txt_side .detail_btn::after {border-left: 15px solid #000;}
+    .find_of_retailer .txt_side .detail_btn::after {border-left: 9px solid #fff;}
+    .find_of_retailer .txt_side .detail_btn:hover::before {border-left: 15px solid #fff;}
+    .find_of_retailer .txt_side .detail_btn:hover::after {border-left: 9px solid #000;}
 }
 
 /*////////////////////////////////////////////////////////////////////////////////*/
@@ -1163,19 +1131,16 @@ img {max-width: 100%;}
     }
 
     .header .header_icon {margin: 0 0 0 30px;}
-
     .gnb {display: flex;}
     .gnb_ham {display: none;}
     .gnb_left {gap: 90px;}
     .gnb_right {gap: 45px; order: 3;}
-
     .gnb>li>a {
         font-weight: 500;
         color: #fff;
     }
 
     .header .control_search #searchbar {width: 1040px;}
-
     .header .control_search .search_icon {
         top: 50%; transform: translateY(-70%);
         right: calc(50% - 480px);
@@ -1192,23 +1157,17 @@ img {max-width: 100%;}
     }
 
     .collection .img_side .img_big {width: 512px;}
-    
     .collection .img_side .img_middle {width: 220px;}
-
-    
     .collection .img_side .img_small {
         width: 220px; height: 180px;
         bottom: -5%; right: 38%; 
     }
 
     .small_move {bottom: 0%!important; opacity: 1!important;}
-
     .brands .link_wrap {display: flex;}
     .brands .link_wrap .brand01 {flex: 1;}    
     .brands .link_wrap02 {flex: 1;}
-
     .news {width: 100%;}
-
     .news .news_wrap {
         width: 1040px;
         display: flex;
@@ -1221,7 +1180,6 @@ img {max-width: 100%;}
     .news .news_inner .news_item~.news_item {margin: 0 0 0 28px;}
     .news .arrow_left {left: 7px;}
     .news .arrow_right {right: 7px;}
-
     .find_of_retailer {
         width: 1040px;
         padding: 0; box-sizing: border-box;

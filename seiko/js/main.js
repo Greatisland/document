@@ -36,7 +36,7 @@ $(function(){
         let height04 = height03 + $('.collection .col').height()
         
         if (scr + 300 >= height04) {
-                $('.col .text_side').addClass('text_move')
+                $('.col03 .text_side').addClass('text_move')
                 setTimeout(function () {
                     $('.col03 .img_middle').addClass('middle_move')
                 },300)
@@ -164,7 +164,6 @@ $(function(){
     function newsWebSlide(){
         let eleWidth = $(".news .news_slider a~a").outerWidth(true)
         let slide = $('.news_slider')
-        console.log(eleWidth)
 
         function right(){
             let all = slide.width()
@@ -203,7 +202,6 @@ $(function(){
     if (mobileWidth.matches) {
 
         //////////////////////
-        colSlide()
         brandSlide()
         newsSlide()
         wosSlide()
@@ -404,6 +402,22 @@ $(function(){
         $('.brands .right_arrow').on('click',function(){right()})
         $('.brands .left_arrow').on('click',function(){left()})
         play()
+
+        let startX = 0
+        let endX = 0
+
+        $('.brands_slide').on("touchstart",function(e){
+            startX = e.originalEvent.touches[0].screenX
+        })
+
+        $('.brands_slide').on("touchend",function(e){
+            endX = e.originalEvent.changedTouches[0].screenX
+            if(startX>endX){
+                right()
+            }else if(startX<endX){
+                left()
+            }
+        })
         }//brandSlide
         /////////////////////////////////////////////////////////////////////////////
 
@@ -443,6 +457,7 @@ $(function(){
             }
             indi[i].click()
         })
+        
         $('.news .right_arrow').click(function(){
             i++
             if(i > indi.length-1) {
@@ -450,7 +465,7 @@ $(function(){
             }
             indi[i].click()
         })
-
+        
         function play(){
             if(!playOn){
                 playOn = true
@@ -470,36 +485,49 @@ $(function(){
         function indiOn(p){$(p).css('backgroundColor','#000')}
         function indiOff(p){$(p).css('backgroundColor','#dedede')}
 
+        let startX = 0
+        let endX = 0
+
+        $('.news_slider').on("touchstart",function(e){
+            startX = e.originalEvent.touches[0].screenX
+        })
+
+        $('.news_slider').on("touchend",function(e){
+            endX = e.originalEvent.changedTouches[0].screenX
+            if(startX>endX){
+                $('.news .right_arrow').click()
+            }else if(startX<endX){
+                $('.news .left_arrow').click()
+            }
+        })
+
         indi[0].click()
         }//newsSlide()
         /////////////////////////////////////////////////////////////////////////////
 
 
         function wosSlide(){
-        let eleWidth = $(".world_of_seiko .wos_wrap div").innerWidth() //padding을 포함한 width
-        let slide = $('.wos_wrap')
-        let direction = 'left'
+        let scrollWidth = $('.wos a').outerWidth(true)
+        let startX = 0
+        let endX = 0
 
-        function right(){
-            if(slide.is(':animated')){
-                return //중복 클릭으로 인한 애니메이션 버그 방지
-            }else if(direction == 'left'){
-                slide.stop().animate({'left': eleWidth * -1})
+        $('.wos').on("touchstart",function(e){
+            startX = e.originalEvent.touches[0].screenX
+        })
+
+        $('.wos').on("touchend",function(e){
+            endX = e.originalEvent.changedTouches[0].screenX
+            if(startX>endX){
+                $(this).stop().animate({
+                    left : scrollWidth * -1
+                })
+            }else if(startX<endX){
+                $(this).stop().animate({
+                    left : 0
+                })
             }
-            direction = 'right'
-        }
+        })
 
-        function left(){
-            if(slide.is(':animated')){
-                return //중복 클릭으로 인한 애니메이션 버그 방지
-            }else if(direction == 'right'){
-                slide.animate({'left': 0})
-            }
-            direction = 'left'
-        }
-
-        $('.world_of_seiko .right_arrow').on('click',function(){right()})
-        $('.world_of_seiko .left_arrow').on('click',function(){left()})
         }//wosSlide()
         //////////////////////////////////////////////////////////////////////////////
     }//mobile ver code
