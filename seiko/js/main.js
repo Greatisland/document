@@ -1,5 +1,15 @@
 $(function(){
+    let mobileCode = window.matchMedia("all and (max-width: 767px)")
+    let webCode = window.matchMedia("all and (min-width: 768px)")
+    if(mobileCode.matches){
+        mobile()
+    }else if(webCode.matches){
+        web()
+    }
+    //첫 디바이스로 진입 시 각 사이즈에 맞는 반응형 코드 적용
 
+////////////////////////////----------------공용 코드 시작----------------////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
     let videoHeight = $('.collection').offset().top + 100
     $('.search_btn').on('click', function(){
         $('.control_search').slideDown().css('display','flex')
@@ -16,7 +26,6 @@ $(function(){
         },600)
     })
     //scrollTop 
-
 
     $(window).on('scroll',function(){
         let height = $('.main_visual').height()
@@ -155,6 +164,10 @@ $(function(){
     })
     //동영상 완전종료
 
+
+//////////////////////-------------------Web & Tablet code 시작----------------------//////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+    function web(){
     $('.world_of_seiko a').on('mouseover mouseout',function(){
         $('.world_of_seiko a').removeClass('wos_move')
         $('.world_of_seiko a').not(this).addClass('wos_move')
@@ -194,85 +207,17 @@ $(function(){
     }
     //newsWebSlide()
     newsWebSlide()
+    }//web_code
 
 
-    /////////////////////////// mobile ver code ////////////////////////////
-
-    let mobileWidth = window.matchMedia("all and (max-width: 767px)")
-    if (mobileWidth.matches) {
-
+//////////////////////////--------------------Mobile code 시작-------------////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+    function mobile(){
         //////////////////////
         brandSlide()
         newsSlide()
         wosSlide()
         //////////////////////
-
-        function colSlide (){ 
-
-        let indi = $('.collection .indicator_box span') //indicator
-        let content = $('.collection .col_slide .col') //slide
-        let i = 0
-        let playOn = false
-        let rollAuto
-        content.hide()
-        indi.click(function(){
-            let index = indi.index(this) // let index = $(this).index()
-            if(indi.state){ //객체.속성
-                stop()
-                indiOff(indi.state)
-                indiOn(this)
-                $(content.state).stop().fadeOut(200)
-                $(content[index]).stop().delay(200).fadeIn(500)
-                i = index 
-                play()
-            } else {
-                indiOn(this)
-                $(content[index]).fadeIn(500)
-                play()
-            }
-            indi.state = this
-            content.state = content[index]
-            return false
-        }) //click_event
-
-        $('.collection .left_arrow').click(function(){
-            i--
-            if(i < 0){
-                i = indi.length - 1
-            }
-            indi[i].click()
-        })
-        $('.collection .right_arrow').click(function(){
-            i++
-            if(i > indi.length-1) {
-                i=0
-            }
-            indi[i].click()
-        })
-
-        function play(){
-            if(!playOn){
-                playOn = true
-                rollAuto = setInterval(function(){
-                    $('.collection .right_arrow').click()
-                }, 4000)
-            }
-        }
-
-        function stop(){
-            if(playOn){
-                playOn = false
-                clearInterval(rollAuto)
-            }
-        }
-
-        function indiOn(p){$(p).css('backgroundColor','#000')}
-        function indiOff(p){$(p).css('backgroundColor','#dedede')}
-
-        indi[0].click()
-        ////////////////////////////////////////////////////////////////////////////////
-        }//colSlide()
-
 
         function brandSlide(){
 
@@ -282,9 +227,7 @@ $(function(){
         let bannerAuto //setInterval함수 제어를 위한 변수
         let indi = $('.brands .indicator_box span')// indicator
         let slide = $('.brands_slide')
-
         let list = $('.brands_slide').children()
-
         
         indi.click(function(){
             $(this).css('backgroundColor','#000')
@@ -419,7 +362,6 @@ $(function(){
             }
         })
         }//brandSlide
-        /////////////////////////////////////////////////////////////////////////////
 
 
         function newsSlide(){
@@ -503,7 +445,6 @@ $(function(){
 
         indi[0].click()
         }//newsSlide()
-        /////////////////////////////////////////////////////////////////////////////
 
 
         function wosSlide(){
@@ -527,8 +468,6 @@ $(function(){
                 })
             }
         })
-
         }//wosSlide()
-        //////////////////////////////////////////////////////////////////////////////
-    }//mobile ver code
+    }
 })

@@ -1046,6 +1046,7 @@ body::before {
         opacity: 0;
         transition: all 0.6s;
         padding: 40px 0 0 0;
+        /* margin: 0 0 0 248px; */
     }
     .news .news_inner .news_item .read_more {
         width: 42%;
