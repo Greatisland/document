@@ -10,10 +10,10 @@ let nickCheck = false
 //id 중복 확인
 document.querySelector('.id_btn').addEventListener('click', function () {
     let userId = document.getElementsByName('userId')[0].value
-    if(!userId){
+    if (!userId) {
         alert('아이디를 입력해주세요')
-    }else{
-            if (id.includes(userId,0)) {
+    } else {
+        if (id.includes(userId, 0)) {
             alert('아이디가 중복되었습니다')
             return idCheck
         } else {
@@ -24,15 +24,15 @@ document.querySelector('.id_btn').addEventListener('click', function () {
 })
 
 //닉네임 중복 확인
-document.querySelector('.nick_btn').addEventListener('click',function(){
+document.querySelector('.nick_btn').addEventListener('click', function () {
     let userNick = document.getElementsByName('nickName')[0].value
-    if(!userNick){
-            alert('닉네임을 입력해주세요')
-    }else{
-        if(nick.includes(userNick,0)){
+    if (!userNick) {
+        alert('닉네임을 입력해주세요')
+    } else {
+        if (nick.includes(userNick, 0)) {
             alert('닉네임이 중복되었습니다')
             return nickCheck
-        }else{
+        } else {
             alert('사용 가능한 닉네임입니다')
             nickCheck = true
         }
@@ -46,8 +46,10 @@ let userPwCheck = true
 userPwAgain.onchange = function(){
     if(userPw.value != userPwAgain.value){
         document.querySelector('.pw_notice').style.display = 'inline'
+        document.querySelector('.pw_notice2').style.display = 'none'
         userPwCheck = false
     }else{
+        document.querySelector('.pw_notice2').style.display = 'inline'
         document.querySelector('.pw_notice').style.display = 'none'
         userPwCheck = true
     }
