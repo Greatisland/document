@@ -284,3 +284,31 @@ new ScrollMagic.Scene({
   .setTween(SupScrollMove)
   .addTo(new ScrollMagic.Controller())
 // product scroll animation
+
+let topNavi = document.querySelector(".top_navi")
+topNavi.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  })
+})
+
+document.addEventListener("scroll", () => {
+  currentScroll = window.scrollY
+  currentScroll > 500 ? topNaviOn() : topNaviOff()
+})
+
+function topNaviOn() {
+  gsap.to(topNavi, 0.6, {
+    opacity: 1,
+    display: "block",
+  })
+}
+
+function topNaviOff() {
+  gsap.to(topNavi, 0.6, {
+    opacity: 0,
+    display: "none",
+  })
+}
+// top_navi
